@@ -1,0 +1,25 @@
+{
+  "name": "WEBS6",
+  "version": "1.0.0",
+  "description": "onze opdracht",
+  "main": "y",
+  "scripts": {
+    "test": "y"
+  },
+  "repository": {
+    "type": "git",
+    "url": "y"
+  },
+  "keywords": [
+    "WEBS6"
+  ],
+  "author": "Quinn en Paul",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "angular": "^1.5.5",
+    "grunt": "^1.0.1",
+    "grunt-browserify": "^5.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
