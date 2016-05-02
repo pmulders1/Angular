@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for js\Games\Services\GameFactory.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../../prettify.css" />
+    <link rel="stylesheet" href="../../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../../index.html">all files</a> / <a href="index.html">js/Games/Services/</a> GameFactory.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>9/16</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">40% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>2/5</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>9/16</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">module.exports = function($http){
+	//var urlBase = "http://mahjongmayhem.herokuapp.com"
+	var factory = {};
+&nbsp;
+	var Games = [
+		{"_id":"571781bd2c154f1100f89523","createdBy":{"_id":"te.hoff@student.avans.nl","name":"Gebruiker2","__v":0},"createdOn":"2016-04-20T13:18:53.109Z","gameTemplate":{"_id":"Ox","__v":0,"id":"Ox"},"__v":0,"players":[{"_id":"te.hoff@student.avans.nl","name":"Timo Hoff","__v":0}],"maxPlayers":32,"minPlayers":2,"state":"open","id":"571781bd2c154f1100f89523"}, 
+		{"_id":"571781812c154f1100f89492","createdBy":{"_id":"te.hoff@student.avans.nl","name":"Gebruiker1","__v":0},"createdOn":"2016-04-20T13:17:53.071Z","gameTemplate":{"_id":"Ox","__v":0,"id":"Ox"},"__v":0,"players":[{"_id":"hallo@student.avans.nl","name":"Test Game","__v":0}],"maxPlayers":32,"minPlayers":2,"state":"playing","id":"571781812c154f1100f89492"}, 
+		{"_id":"57177d402c154f1100f89401","createdBy":{"_id":"te.hoff@student.avans.nl","name":"Gebruiker3","__v":0},"createdOn":"2016-04-20T12:59:44.842Z","gameTemplate":{"_id":"Ox","__v":0,"id":"Ox"},"__v":0,"players":[{"_id":"test@student.avans.nl","name":"Paul VS Quinn","__v":0}],"maxPlayers":32,"minPlayers":2,"state":"open","id":"57177d402c154f1100f89401"}
+	];
+&nbsp;
+	factory.getGames = function (filter = '') {
+        //return $http.get(urlBase + "/Games" + filter);
+        return Games;
+    };
+&nbsp;
+    factory.addGame = <span class="fstat-no" title="function not covered" >function(newGame){</span>
+<span class="cstat-no" title="statement not covered" >    	Games.push(newGame);</span>
+    }
+&nbsp;
+    factory.addUser = <span class="fstat-no" title="function not covered" >function(_id, user){</span>
+<span class="cstat-no" title="statement not covered" >    	for(var i = 0; i &lt; Games.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >    		if(Games[i]._id == _id){</span>
+<span class="cstat-no" title="statement not covered" >    			Games[i].players.push(user);</span>
+    		}
+    	}
+    }
+&nbsp;
+    factory.getGameById = <span class="fstat-no" title="function not covered" >function(_id){</span>
+<span class="cstat-no" title="statement not covered" >    	for(var i = 0; i &lt; Games.length; i++){</span>
+<span class="cstat-no" title="statement not covered" >    		if(Games[i]._id == _id){</span>
+<span class="cstat-no" title="statement not covered" >    			return Games[i];</span>
+    		}
+    	}
+    }
+&nbsp;
+	return factory;
+};</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Apr 26 2016 09:23:30 GMT+0200 (West-Europa (zomertijd))
+</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

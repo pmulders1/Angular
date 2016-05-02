@@ -1,0 +1,3 @@
+<ul>
+	<li ng-repeat="game in games">{{ game._id }} - {{ game.state }} created on: {{ game.createdOn }} - players {{ game.players.length }} <input type="button" value="Join Race" ng-click="addUser(game._id)" ng-show="game.state == 'open'"><a href="#games/{{game._id}}" ng-show="game.state != 'playing'">Details</a></li>
+</ul>

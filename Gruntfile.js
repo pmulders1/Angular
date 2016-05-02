@@ -42,5 +42,5 @@ module.exports = function(grunt) {
  grunt.loadNpmTasks('grunt-contrib-watch');
 
  // The default tasks to run when you type: grunt
- grunt.registerTask('default', ['browserify', 'copy']);
+ grunt.registerTask('default', ['browserify', 'copy', 'watch']);
 };
