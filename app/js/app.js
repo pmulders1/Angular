@@ -7,6 +7,7 @@ var app = angular.module('WEBS6', ['ngRoute']);
 
 var gameFactory = require('./Games/Services/GameFactory');
 var gameController = require('./Games/Controllers/GameController');
+var playerController = require('./Player/Controllers/PlayerController');
 var homeController = require('./Home/Controllers/HomeController');
 var gameModel = require('./Games/Models/Game');
 
@@ -14,7 +15,7 @@ var gameModel = require('./Games/Models/Game');
 app.factory('GameFactory', ['$http', gameFactory]);
 
 // configure our routes
-app.config(function($routeProvider) {
+app.config(function($routeProvider,$locationProvider) {
     $routeProvider
 
         // route for the home page
@@ -25,22 +26,28 @@ app.config(function($routeProvider) {
 
         .when('/games', {
             templateUrl : './js/Games/Views/GameListView.html',
-            controller  : 'GameController'
+            controller  : 'GameController as gList'
         })
 
         .when('/games/add', {
             templateUrl : './js/Games/Views/GameCreateView.html',
-            controller  : 'GameController'
+            controller  : 'GameController as gCreate'
         })
 
         .when('/games/:gameId', {
             templateUrl : './js/Games/Views/GameDetailView.html',
             controller  : 'GameDetailController'
+        })
+
+        .when('/authcallback', {
+            templateUrl : './js/Player/Views/PlayerProfile.html',
+            controller  : 'PlayerController'
         });
 });
 
 // Controllers registreren
 app.controller('HomeController', ['$scope', homeController]);
+app.controller('PlayerController', ['$scope', '$routeParams', playerController]);
 app.controller('GameController', ['$scope', 'GameFactory', '$routeParams', gameController]);
 app.controller('GameDetailController', ['$scope', 'GameFactory', '$routeParams',
   function($scope, GameFactory, $routeParams) {

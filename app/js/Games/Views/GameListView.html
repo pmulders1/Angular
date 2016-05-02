@@ -1,3 +1,20 @@
-<ul>
-	<li ng-repeat="game in games">{{ game._id }} - {{ game.state }} created on: {{ game.createdOn }} - players {{ game.players.length }} <input type="button" value="Join Race" ng-click="addUser(game._id)" ng-show="game.state == 'open'"><a href="#games/{{game._id}}" ng-show="game.state != 'playing'">Details</a></li>
-</ul>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>_id:</th>
+        <th>State:</th>
+        <th>Created on:</th>
+        <th>Players:</th>
+        <th>Options:</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<tr ng-repeat="game in gList.games">
+    		<td>{{ game._id }}</td>
+    		<td>{{ game.state }}</td>
+    		<td>{{ game.createdOn }}</td>
+    		<td>{{ game.players.length }}</td>
+    		<td><input type="button" value="Join Race" ng-click="addUser(game._id)" ng-show="game.state == 'open'"><a href="#games/{{game._id}}" ng-show="game.state != 'playing'">Details</a></td>
+    	</tr>
+    </tbody>
+</table>

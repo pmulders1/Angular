@@ -1,6 +1,6 @@
 module.exports = function(data){
 	var self = this;
-	console.log(data);
+	
 	self._id = data._id;
 	
 	self.createdBy = data.createdBy;
