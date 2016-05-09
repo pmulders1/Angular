@@ -1,6 +1,6 @@
 module.exports = function($http){
 	var urlBase = "http://mahjongmayhem.herokuapp.com"
-	var factory = {};
+	var service = {};
 
 	var Games = [
 		{"_id":"571781bd2c154f1100f89523","createdBy":{"_id":"te.hoff@student.avans.nl","name":"Gebruiker2","__v":0},"createdOn":"2016-04-20T13:18:53.109Z","gameTemplate":{"_id":"Ox","__v":0,"id":"Ox"},"__v":0,"players":[{"_id":"te.hoff@student.avans.nl","name":"Timo Hoff","__v":0}],"maxPlayers":32,"minPlayers":2,"state":"open","id":"571781bd2c154f1100f89523"}, 
@@ -8,16 +8,16 @@ module.exports = function($http){
 		{"_id":"57177d402c154f1100f89401","createdBy":{"_id":"te.hoff@student.avans.nl","name":"Gebruiker3","__v":0},"createdOn":"2016-04-20T12:59:44.842Z","gameTemplate":{"_id":"Ox","__v":0,"id":"Ox"},"__v":0,"players":[{"_id":"test@student.avans.nl","name":"Paul VS Quinn","__v":0}],"maxPlayers":32,"minPlayers":2,"state":"open","id":"57177d402c154f1100f89401"}
 	];
 
-	factory.getGames = function (filter = '') {
+	service.getGames = function (filter = '') {
         return $http.get(urlBase + "/Games" + filter);
         //return Games;
     };
 
-    factory.addGame = function(newGame){
+    service.addGame = function(newGame){
     	Games.push(newGame);
     }
 
-    factory.addUser = function(_id, user){
+    service.addUser = function(_id, user){
     	for(var i = 0; i < Games.length; i++){
     		if(Games[i]._id == _id){
     			Games[i].players.push(user);
@@ -25,7 +25,7 @@ module.exports = function($http){
     	}
     }
 
-    factory.getGameById = function(_id){
+    service.getGameById = function(_id){
     	for(var i = 0; i < Games.length; i++){
     		if(Games[i]._id == _id){
     			return Games[i];
@@ -33,5 +33,5 @@ module.exports = function($http){
     	}
     }
 
-	return factory;
+	return service;
 };
