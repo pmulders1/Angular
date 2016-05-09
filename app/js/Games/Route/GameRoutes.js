@@ -11,9 +11,4 @@ module.exports = function($routeProvider) {
             templateUrl : './js/Games/Views/GameCreateView.html',
             controller  : 'GameController as gCreate'
         })
-
-        .when('/games/:gameId', {
-            templateUrl : './js/Games/Views/GameDetailView.html',
-            controller  : 'GameDetailController'
-        })
 };
