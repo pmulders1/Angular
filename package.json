@@ -37,6 +37,8 @@
     "karma-sinon": "^1.0.4",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
-    "watchify": "^3.7.0"
+    "watchify": "^3.7.0",
+    "angular-ui-router": "^0.2.18",
+    "grunt-http-server": "^1.16.0"
   }
 }

@@ -1,14 +1,18 @@
-module.exports = function($routeProvider) {
+module.exports = function($stateProvider, $locationProvider) {
 
-    $routeProvider
+	$stateProvider
 
-        .when('/games', {
-            templateUrl : './js/Games/Views/GameListView.html',
-            controller  : 'GameController as gList'
+        .state('games', {
+            url: '/games',
+            templateUrl: './js/Games/Views/GameListView.html',
+            controller: 'GameController as gList',
         })
 
-        .when('/games/add', {
+        .state('addgame', {
+        	url: '/games/add',
             templateUrl : './js/Games/Views/GameCreateView.html',
             controller  : 'GameController as gCreate'
-        })
+        });
+
+        $locationProvider.html5Mode(true);
 };

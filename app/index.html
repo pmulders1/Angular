@@ -6,7 +6,7 @@
     	<!-- Latest compiled and minified CSS -->
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-
+		<base href="/">
 	</head>
 	<body ng-controller="HomeController">
 
@@ -19,16 +19,25 @@
 	            </div>
 
 	            <ul class="nav navbar-nav navbar-right">
-	                <li><a href="#home"><i class="fa fa-home"></i> Home</a></li>
-	                <li><a href="#games"><i class="fa fa-shield"></i> Games</a></li>
-	                <li><a href="#games/add"><i class="fa fa-shield"></i> New Game</a></li>
-	                <li><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:8080/dist/#/authcallback"><i class="fa fa-shield"></i> Login</a></li>
+	            	<a class="tab-item" ui-sref="home" ui-sref-active="active" nav-transition="none">
+			            <i class="fa fa-home"></i>
+			            Home
+			        </a>
+			        <a class="tab-item" ui-sref="games" ui-sref-active="active" nav-transition="none">
+			            <i class="fa fa-shield"></i>
+			            Games
+			        </a>
+			        <a class="tab-item" ui-sref="addgame" ui-sref-active="active" nav-transition="none">
+			            <i class="fa fa-shield"></i>
+			            New Game
+			        </a>
+	                <li><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:8080/dist/%23/authcallback"><i class="fa fa-shield"></i> Login</a></li>
 	            </ul>
 	        </div>
 	        </nav>
 	    </header>
 		<div id="main" class="col-md-9" style="margin: 0 auto;">
-		 	<div ng-view></div>
+			<div ui-view></div>
 		</div>
  		
  		<!-- Load Scripts -->

@@ -15,6 +15,7 @@ module.exports = function($http){
 
     service.addGame = function(newGame){
     	Games.push(newGame);
+        console.log(newGame);
     }
 
     service.addUser = function(_id, user){

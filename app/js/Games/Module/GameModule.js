@@ -5,7 +5,7 @@ var gameService = require('../Services/GameService');
 var gameController = require('../Controllers/GameController');
 
 gameModule.factory('GameService', ['$http', gameService]);
-gameModule.controller('GameController', ['$scope', 'GameService', '$routeParams', gameController]);
+gameModule.controller('GameController', gameController);
 gameModule.config(gameRoute);
 
 module.exports = gameModule;
