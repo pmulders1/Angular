@@ -14,5 +14,4 @@ module.exports = function($stateProvider, $locationProvider) {
             controller  : 'GameController as gCreate'
         });
 
-        $locationProvider.html5Mode(true);
 };

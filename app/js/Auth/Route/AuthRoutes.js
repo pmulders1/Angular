@@ -1,10 +1,10 @@
-module.exports = function($routeProvider) {
+module.exports = function($stateProvider, $locationProvider) {
 
-    $routeProvider
-        .when('/authcallback', {
-
-        	template: ' ',
-            //templateUrl : './js/Player/Views/PlayerProfile.html',
+    $stateProvider
+        .state('authcallback', {
+        	//template: ' ',
+        	url: '/authcallback?:username&:token',
+            templateUrl : './js/Auth/Views/PlayerProfile.html',
             controller  : 'PlayerController'
         });
 };

@@ -1,5 +1,24 @@
-<p> {{ game._id }}</p>
-<p> Created on: {{ game.createdOn }}</p>
-<ul>
-<li ng-repeat='player in game.players'>{{ player._id }} - {{ player.name }}</li>
-</ul>
+<div class="alert alert-info" ng-if="gDetailController.succesMessage != ''">
+  {{ gDetailController.succesMessage }}
+</div>
+<div class="alert alert-danger" ng-if="gDetailController.errorMessage != ''">
+  {{ gDetailController.errorMessage }}
+</div>
+<div class="row">
+	<div class="col-md-4">
+		<p> {{ gDetailController.game._id }}</p>
+		<p> Created on: {{ gDetailController.game.createdOn }}</p>
+		<p> Created by: {{ gDetailController.game.createdBy.name }}</p>
+		<p> State: {{ gDetailController.game.state }}</p>
+		<input type="button" value="Start Race" ng-click="gDetailController.startGame(gDetailController.game._id)" ng-show="gDetailController.game.state == 'open' && gDetailController.game.createdBy._id == gDetailController.username">
+		<ul>
+			<li ng-repeat='player in gDetailController.game.players'>{{ player._id }} - {{ player.name }}</li>
+		</ul>
+	</div>
+	<div class="col-md-6">
+		<p>Nr. of possible matches = {{ gDetailController.possibleMatches }}</p>
+		<ul>
+			<li ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)">{{ tile.xPos }} - {{ tile.yPos }} - <strong>{{ tile.zPos }}</strong> - {{ tile.tile.suit }} - {{ tile.tile.name }}- <strong>{{ tile.tile.matchesWholeSuit }}</strong></li>
+		</ul>
+	</div>
+</div>

@@ -1,6 +1,11 @@
-angular.module('webs6').factory('AuthService', function ($location) {
-    return function () {
-        console.log("test");
-        $location.path('/');
+angular.module('webs6').factory('AuthService', function () {
+  return {
+    request: function (config) {
+
+      config.headers['X-username'] = window.localStorage['username'] != undefined ? window.localStorage['username'] : null;
+      config.headers['X-token'] = window.localStorage['token'] != undefined ? window.localStorage['token'] : null;
+
+      return config;
     }
+  };
 });

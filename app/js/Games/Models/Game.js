@@ -11,7 +11,7 @@ module.exports = function(data){
 
 	self.gameTemplate = data.gameTemplate;
 	
-	self.players = [];
+	self.players = data.players;
 	self.maxPlayers = data.maxPlayers;
 	self.minPlayers = data.minPlayers;
 

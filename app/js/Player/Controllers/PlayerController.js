@@ -1,9 +1,12 @@
-module.exports = function($scope, $routeParams){
+module.exports = function($scope, $stateParams){
 	var self = this;
 
-	console.log($routeParams);
-
-	self.init = function () {
-        console.log($routeParams)
-    };
+	if(window.localStorage['token'] == undefined && window.localStorage['username'] == undefined){
+		if($stateParams.token != undefined && $stateParams.username != undefined){
+			window.localStorage['token'] = $stateParams.token;
+			window.localStorage['username'] = $stateParams.username;
+			console.log(window.localStorage);
+		}
+	}
+	
 }

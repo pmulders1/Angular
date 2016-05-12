@@ -6,6 +6,8 @@ module.exports = function($scope, GameService, $stateParams){
 	self.status;
 	self.gameId = $stateParams.gameId;
 	
+	self.succesMessage = '';
+	self.errorMessage = '';
 
 	self.game = {
 		"templateName": "","minPlayers": 0,"maxPlayers": 0
@@ -15,7 +17,7 @@ module.exports = function($scope, GameService, $stateParams){
 	getGames();
 
 	function getGames(){
-		GameService.getGames('?state=open')
+		GameService.getGames()
 
 		.then(function (response) {
 
@@ -29,12 +31,25 @@ module.exports = function($scope, GameService, $stateParams){
 	}
 
 	self.addUser = function(_id){
-		var user = {"_id":"te.hoff@student.avans.nl","name":"Harry","__v":0};
-		GameService.addUser(_id, user);
+		self.succesMessage = '';
+		self.errorMessage = '';
+
+		GameService.addUser(_id).then(function(response){
+			self.succesMessage = "You joined the game with id: " + _id;
+		}, function(err){
+			self.errorMessage = err.data.message;
+		});
 	}
 
 	self.addGame = function(Game){
-		GameService.addGame(Game);
+		self.succesMessage = '';
+		self.errorMessage = '';
+
+		GameService.addGame(Game).then(function(response){
+			self.succesMessage = "Game has been succesfully created!";
+		}, function(err){
+			self.errorMessage = err.data.message;
+		});
 	}
 
 	
