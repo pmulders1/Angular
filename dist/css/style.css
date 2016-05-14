@@ -2,3 +2,16 @@
 	width: 90%!important;
 	margin: 0 auto;
 }
+.right5{ margin-right: 5px; }
+.right10{ margin-right: 10px; }
+.right15{ margin-right: 15px; }
+.right20{ margin-right: 20px; }
+
+.floatRight{ float: right; }
+.floatLeft{ float: left; }
+
+.open{ background-color: #337ab7!important; }
+.playing{ background-color: #5cb85c!important; }
+.finished{ background-color: #d9534f!important; }
+
+.fontSize13{ font-size: 13px; }

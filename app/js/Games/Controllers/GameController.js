@@ -52,5 +52,7 @@ module.exports = function($scope, GameService, $stateParams){
 		});
 	}
 
-	
+	self.applySearchFilter = function(term){
+		console.log(term);
+	}
 }

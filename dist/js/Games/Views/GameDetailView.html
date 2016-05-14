@@ -5,18 +5,29 @@
   {{ gDetailController.errorMessage }}
 </div>
 <div class="row">
-	<div class="col-md-4">
-		<p> {{ gDetailController.game._id }}</p>
-		<p> Created on: {{ gDetailController.game.createdOn }}</p>
-		<p> Created by: {{ gDetailController.game.createdBy.name }}</p>
-		<p> State: {{ gDetailController.game.state }}</p>
+	<div class="col-md-5">
+		<span class="label label-default">{{ gDetailController.game._id }}</span>
+		<span class="label label-default floatRight {{ gDetailController.game.state }}">{{ gDetailController.game.state }}</span>
 		<input type="button" value="Start Race" ng-click="gDetailController.startGame(gDetailController.game._id)" ng-show="gDetailController.game.state == 'open' && gDetailController.game.createdBy._id == gDetailController.username">
-		<ul>
-			<li ng-repeat='player in gDetailController.game.players'>{{ player._id }} - {{ player.name }}</li>
-		</ul>
+		<table class="table table-striped">
+		    <thead>
+		      <tr>
+		        <th>Player id:</th>
+		        <th>Name:</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		    	<tr  ng-repeat='player in gDetailController.game.players'>
+		    		<td>{{ player._id }}</td>
+		    		<td>{{ player.name }}</td>
+		    	</tr>
+		    </tbody>
+		</table>
+		<p class="floatLeft fontSize13"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.createdOn }}</p>
+		<p class="floatRight fontSize13"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - {{ gDetailController.game.createdBy.name }}</p>
 	</div>
 	<div class="col-md-6">
-		<p>Nr. of possible matches = {{ gDetailController.possibleMatches }}</p>
+		<span class="label label-default">#{{ gDetailController.possibleMatches }} matches</span>
 		<ul>
 			<li ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)">{{ tile.xPos }} - {{ tile.yPos }} - <strong>{{ tile.zPos }}</strong> - {{ tile.tile.suit }} - {{ tile.tile.name }}- <strong>{{ tile.tile.matchesWholeSuit }}</strong></li>
 		</ul>

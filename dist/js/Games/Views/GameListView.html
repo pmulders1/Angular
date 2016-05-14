@@ -4,6 +4,7 @@
 <div class="alert alert-danger" ng-if="gList.errorMessage != ''">
   {{ gList.errorMessage }}
 </div>
+<button type="button" class="btn btn-primary right10" ng-click="myFilter={state:'open'}">Open</button><button type="button" class="btn btn-primary right10" ng-click="myFilter={state:'playing'}">Playing</button><button type="button" class="btn btn-primary right10" ng-click="myFilter={state:'finished'}">Finished</button><button type="button" class="btn btn-primary" ng-click="myFilter={state:''}">Clear</button><label class="floatRight">Search: <input ng-model="searchText"></label>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -15,7 +16,7 @@
       </tr>
     </thead>
     <tbody>
-    	<tr ng-repeat="game in gList.games">
+    	<tr ng-repeat="game in gList.games | filter:searchText | filter:myFilter">
     		<td>{{ game._id }}</td>
     		<td>{{ game.state }}</td>
     		<td>{{ game.createdOn }}</td>
