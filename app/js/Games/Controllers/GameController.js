@@ -51,8 +51,4 @@ module.exports = function($scope, GameService, $stateParams){
 			self.errorMessage = err.data.message;
 		});
 	}
-
-	self.applySearchFilter = function(term){
-		console.log(term);
-	}
 }

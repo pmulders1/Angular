@@ -18,7 +18,9 @@
   "devDependencies": {
     "angular": "^1.5.5",
     "angular-mocks": "^1.5.5",
+    "angular-resource": "^1.5.5",
     "angular-route": "1.4.x",
+    "angular-ui-router": "^0.2.18",
     "browserify": "^13.0.0",
     "browserify-istanbul": "^2.0.0",
     "browserify-shim": "^3.8.12",
@@ -27,6 +29,7 @@
     "grunt-browserify": "^5.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-http-server": "^1.16.0",
     "grunt-karma": "^0.12.2",
     "karma": "^0.13.22",
     "karma-browserify": "^5.0.4",
@@ -37,8 +40,6 @@
     "karma-sinon": "^1.0.4",
     "mocha": "^2.4.5",
     "sinon": "^1.17.3",
-    "watchify": "^3.7.0",
-    "angular-ui-router": "^0.2.18",
-    "grunt-http-server": "^1.16.0"
+    "watchify": "^3.7.0"
   }
 }
