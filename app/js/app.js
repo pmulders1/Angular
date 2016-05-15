@@ -8,6 +8,7 @@ TODO:
 
 Vragen
 - We krijgen de directive niet aan de praat, de template wordt niet gevonden geeft een 404 not found terug
+- Er komt een fout op bij het runnen van npm test -> angular not found. Wat moeten we doen om dit op te lossen?
 */
 
 require('angular/angular');

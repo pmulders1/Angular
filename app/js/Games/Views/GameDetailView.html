@@ -29,7 +29,7 @@
 	<div class="col-md-6">
 		<span class="label label-default">#{{ gDetailController.possibleMatches }} matches</span>
 		<ul>
-			<li ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)">{{ tile.xPos }} - {{ tile.yPos }} - <strong>{{ tile.zPos }}</strong> - {{ tile.tile.suit }} - {{ tile.tile.name }}- <strong>{{ tile.tile.matchesWholeSuit }}</strong></li>
+			<li ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)">{{ tile.xPos }} - {{ tile.yPos }} - <strong>{{ tile.zPos }}</strong> - {{ tile.tile.suit }} - {{ tile.tile.name }}- <strong>{{ tile.tile.matchesWholeSuit }}</strong><div class="tile {{tile.tile.suit}}{{tile.tile.name}}"></div></li>
 		</ul>
 	</div>
 </div>

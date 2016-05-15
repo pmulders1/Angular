@@ -15,3 +15,29 @@
 .finished{ background-color: #d9534f!important; }
 
 .fontSize13{ font-size: 13px; }
+
+.tile{
+	background-image: url('./../images/sprites.png');
+	width: 70px;
+	height: 90px;
+}
+.Character1 { background-position: 0px 0px; }
+.Character2 { background-position: -73px 0px; }
+.Character3 { background-position: -146px 0px; }
+.Character4 { background-position: -219px 0px; }
+.Character5 { background-position: -292px 0px; }
+.Character6 { background-position: -365px 0px; }
+.Character7 { background-position: -438px 0px; }
+.Character8 { background-position: -511px 0px; }
+.Character9 { background-position: -584px 0px; }
+
+.WindNorth { background-position: -657px 0px; }
+.WindSouth { background-position: -730px 0px; }
+.WindEast { background-position: -803px 0px; }
+.WindWest { background-position: -876px 0px; }
+
+.DragonGreen { background-position: -951px 0px; }
+.DragonRed { background-position: -951px -90px; }
+.DragonWhite { background-position: -951px -180px; }
+
+.Circle2{ background-position: -73px -181px;  }
