@@ -9,6 +9,8 @@ TODO:
 Vragen
 - We krijgen de directive niet aan de praat, de template wordt niet gevonden geeft een 404 not found terug
 - Er komt een fout op bij het runnen van npm test -> angular not found. Wat moeten we doen om dit op te lossen?
+- Wat is de spelverloop en wie regelt dit? 
+- Worden de gematchede tiles van het bord gehaald of moeten wij dit zelf doen?
 */
 
 require('angular/angular');

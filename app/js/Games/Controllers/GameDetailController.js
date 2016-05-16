@@ -12,9 +12,13 @@ module.exports = function($scope, GameService, $stateParams) {
 
     GameService.getGameById($stateParams._id).then(function(response){
     	self.game = response;
-    	GameService.getGameTiles(self.game._id).then(function(response){
-    		self.game.tiles = response;
-    	});
+
+        GameService.getOpenOrClosedMatches(self.game._id, 'false').then(function(response){
+            console.log("getOpenOrClosedMatches:");
+            console.log(response);
+            self.game.tiles = response;
+        });
+
     	GameService.getOpenOrClosedMatches($stateParams._id,'false').then(function(response){
 			self.possibleMatches = response.length;
 		});
@@ -28,8 +32,6 @@ module.exports = function($scope, GameService, $stateParams) {
                 }
                 self.game.matched.push(match);
             }
-
-            console.log(self.game.matched);
         });
     }, function(err){
 		self.errorMessage = err.data.message;
