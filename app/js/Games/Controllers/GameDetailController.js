@@ -15,9 +15,22 @@ module.exports = function($scope, GameService, $stateParams) {
     	GameService.getGameTiles(self.game._id).then(function(response){
     		self.game.tiles = response;
     	});
-    	GameService.getMatchedTiles($stateParams._id,'false').then(function(response){
+    	GameService.getOpenOrClosedMatches($stateParams._id,'false').then(function(response){
 			self.possibleMatches = response.length;
 		});
+        GameService.getMatchedTiles($stateParams._id).then(function(response){
+            self.game.matched = [];
+            for(var i = 0; i < response.length; i+=2){
+                var match = {
+                    "tile1":response[i].tile,
+                    "tile2":response[i+1].tile,
+                    "player":response[i].match
+                }
+                self.game.matched.push(match);
+            }
+
+            console.log(self.game.matched);
+        });
     }, function(err){
 		self.errorMessage = err.data.message;
     });
@@ -40,13 +53,13 @@ module.exports = function($scope, GameService, $stateParams) {
     			tile2Id: _tileid
     		}
 
-    		GameService.matchTiles(_id, data).then(function(response){
+    		GameService.postMatchTiles(_id, data).then(function(response){
     			self.succesMessage = "Tiles are a match!";
     		}, function(err){
     			self.errorMessage = err.data.message;
     		});
 
-    		GameService.getMatchedTiles(_id,'false').then(function(response){
+    		GameService.getOpenOrClosedMatches(_id,'false').then(function(response){
 				self.possibleMatches = response.length;
 			});
 

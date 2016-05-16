@@ -25,11 +25,31 @@
 		</table>
 		<p class="floatLeft fontSize13"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.createdOn }}</p>
 		<p class="floatRight fontSize13"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - {{ gDetailController.game.createdBy.name }}</p>
-	</div>
-	<div class="col-md-6">
 		<span class="label label-default">#{{ gDetailController.possibleMatches }} matches</span>
-		<ul>
-			<li ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)">{{ tile.xPos }} - {{ tile.yPos }} - <strong>{{ tile.zPos }}</strong> - {{ tile.tile.suit }} - {{ tile.tile.name }}- <strong>{{ tile.tile.matchesWholeSuit }}</strong><div class="tile {{tile.tile.suit}}{{tile.tile.name}}"></div></li>
-		</ul>
+		<p class="floatLeft fontSize13"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.gameTemplate._id }}</p>
+	</div>
+	<div class="col-md-6 absolute top250" >
+		<div class="absolute" ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)" style="left:{{tile.xPos * 36}}px; top:{{tile.yPos * 45}}px; z-index:{{tile.zPos}}">
+			<div class="tile {{tile.tile.suit}}{{tile.tile.name}}"></div>
+		</div>
+	</div>
+
+	<div class="floatRight">
+		<table style="width:100%" class="table table-striped">
+			<thead>
+		      <tr>
+		        <th>Match #1</th>
+		        <th>Match #2</th>
+		        <th>Matched by</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+				<tr ng-repeat="match in gDetailController.game.matched">
+					<td><div class="tile {{match.tile1.suit}}{{match.tile1.name}}"></div></td>
+					<td><div class="tile {{match.tile2.suit}}{{match.tile2.name}}"></div></td> 
+					<td>{{match.player.foundBy}}</br>{{match.player.foundOn}}</td>
+				</tr>
+			</tbody>
+		</table>
 	</div>
 </div>

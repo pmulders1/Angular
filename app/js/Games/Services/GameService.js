@@ -36,16 +36,23 @@ module.exports = function($http){
         });
     }
 
-    service.matchTiles = function(_id, data){
+    service.postMatchTiles = function(_id, data){
         return $http.post(urlBase + "/Games/" + _id + "/Tiles/matches", data).then(function(response){
             return response.data;
         }); 
     }
 
-    service.getMatchedTiles = function(_id, filter = ''){
+    service.getOpenOrClosedMatches = function(_id, filter = ''){
         return $http.get(urlBase + "/Games/" + _id + "/Tiles?matched=" + filter).then(function(response){
             return response.data;
         }); 
     }
+
+    service.getMatchedTiles = function(_id){
+        return $http.get(urlBase + "/Games/" + _id + "/Tiles/matches").then(function(response){
+            return response.data;
+        });
+    }
+
 	return service;
 };

@@ -21,6 +21,12 @@
 	width: 70px;
 	height: 90px;
 }
+.absolute{ 
+	position:absolute;
+}
+.top250{top:250px;}
+
+
 .Character1 { background-position: 0px 0px; }
 .Character2 { background-position: -73px 0px; }
 .Character3 { background-position: -146px 0px; }
