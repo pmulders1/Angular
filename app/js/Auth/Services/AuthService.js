@@ -1,4 +1,4 @@
-angular.module('webs6').factory('AuthService', function () {
+module.exports = function () {
   return {
     request: function (config) {
 
@@ -8,4 +8,4 @@ angular.module('webs6').factory('AuthService', function () {
       return config;
     }
   };
-});
+};

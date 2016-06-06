@@ -17,16 +17,16 @@ module.exports = function($scope, GameService, $stateParams){
 	getGames();
 
 	function getGames(){
-		GameService.getGames()
 
-		.then(function (response) {
-
-			for(var i = 0; i < response.data.length; i++){
-				var game = new Game(response.data[i]);
-				self.games.push(game);
+		GameService.getGames(function(response){
+			if(response.status == '200'){
+				for(var i = 0; i < response.data.length; i++){
+					var game = new Game(response.data[i]);
+					self.games.push(game);
+				}
+			} else {
+				self.status = 'Unable to load customer data: ' + error.message;
 			}
-		}, function (error) {
-		    self.status = 'Unable to load customer data: ' + error.message;
 		});
 	}
 
@@ -34,10 +34,12 @@ module.exports = function($scope, GameService, $stateParams){
 		self.succesMessage = '';
 		self.errorMessage = '';
 
-		GameService.addUser(_id).then(function(response){
-			self.succesMessage = "You joined the game with id: " + _id;
-		}, function(err){
-			self.errorMessage = err.data.message;
+		GameService.addUser(_id, function(response){
+			if(response.status == 200){
+				self.succesMessage = "You joined the game with id: " + _id;
+			} else {
+				self.errorMessage = response.data.message;
+			}
 		});
 	}
 
@@ -45,10 +47,12 @@ module.exports = function($scope, GameService, $stateParams){
 		self.succesMessage = '';
 		self.errorMessage = '';
 
-		GameService.addGame(Game).then(function(response){
-			self.succesMessage = "Game has been succesfully created!";
-		}, function(err){
-			self.errorMessage = err.data.message;
+		GameService.addGame(Game, function(response){
+			if(response.status == 200){
+				self.succesMessage = "Game has been succesfully created!";
+			} else {
+				self.errorMessage = response.data.message;
+			}
 		});
 	}
 }

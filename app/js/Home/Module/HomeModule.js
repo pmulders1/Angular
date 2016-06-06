@@ -1,3 +1,4 @@
+require('angular/angular');
 var homeModule = angular.module('webs6.home', []);
 
 var homeRoute = require("../Route/HomeRoutes");

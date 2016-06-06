@@ -1,3 +1,4 @@
+require('angular/angular');
 var gameModule = angular.module('webs6.game', []);
 
 var gameRoute = require("../Route/GameRoutes");

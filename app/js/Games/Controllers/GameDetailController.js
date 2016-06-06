@@ -10,38 +10,42 @@ module.exports = function($scope, GameService, $stateParams) {
 	self.matchtiles = [];
 	self.possibleMatches = 0;
 
-    GameService.getGameById($stateParams._id).then(function(response){
-    	self.game = response;
+    GameService.getGameById($stateParams.id, function(response){
 
-        GameService.getOpenOrClosedMatches(self.game._id, 'false').then(function(response){
-            console.log("getOpenOrClosedMatches:");
-            console.log(response);
-            self.game.tiles = response;
-        });
+        if(response.status == 200){
+        	self.game = response.data;
 
-    	GameService.getOpenOrClosedMatches($stateParams._id,'false').then(function(response){
-			self.possibleMatches = response.length;
-		});
-        GameService.getMatchedTiles($stateParams._id).then(function(response){
-            self.game.matched = [];
-            for(var i = 0; i < response.length; i+=2){
-                var match = {
-                    "tile1":response[i].tile,
-                    "tile2":response[i+1].tile,
-                    "player":response[i].match
+            GameService.getOpenOrClosedMatches($stateParams.id, function(response){
+                self.game.tiles = response;
+            }, 'false');
+
+        	GameService.getOpenOrClosedMatches($stateParams.id, function(response){
+    			self.possibleMatches = response.length;
+    		},'false');
+
+            GameService.getMatchedTiles($stateParams.id, function(response){
+                self.game.matched = [];
+                for(var i = 0; i < response.data.length; i+=2){
+                    var match = {
+                        "tile1":response.data[i].tile,
+                        "tile2":response.data[i+1].tile,
+                        "player":response.data[i].match
+                    }
+                    self.game.matched.push(match);
                 }
-                self.game.matched.push(match);
-            }
-        });
-    }, function(err){
-		self.errorMessage = err.data.message;
+            });
+        } else {
+            self.errorMessage = response.data.message;
+        }
     });
 
     self.startGame = function(_id){
-    	GameService.startGame(_id).then(function(response){
-    		self.succesMessage = "Game has started!";
-    	}, function(err){
-    		self.errorMessage = err.data.message;
+    	GameService.startGame(_id, function(response){
+            if(response.status == 200){
+                self.succesMessage = "Game has started!";
+            } else {
+                self.errorMessage = response.data.message;
+            }
     	});
     }
 
@@ -55,15 +59,17 @@ module.exports = function($scope, GameService, $stateParams) {
     			tile2Id: _tileid
     		}
 
-    		GameService.postMatchTiles(_id, data).then(function(response){
-    			self.succesMessage = "Tiles are a match!";
-    		}, function(err){
-    			self.errorMessage = err.data.message;
+    		GameService.postMatchTiles(_id, data, function(response){
+                if(response.status == 200){
+                    self.succesMessage = "Tiles are a match!";
+                } else {
+                    self.errorMessage = response.data.message;
+                }
     		});
 
-    		GameService.getOpenOrClosedMatches(_id,'false').then(function(response){
+    		GameService.getOpenOrClosedMatches(_id, function(response){
 				self.possibleMatches = response.length;
-			});
+			}, 'false');
 
     		self.matchtiles = [];
     	} else {

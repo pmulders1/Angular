@@ -3,12 +3,9 @@ module.exports = function($stateProvider) {
     $stateProvider
 
         .state('gamedetail', {
-        	url: '/gamedetail',
+        	url: '/gamedetail/:id',
+            params: {'id': null },
             templateUrl : './js/Games/Views/GameDetailView.html',
-            controller  : 'GameDetailController as gDetailController',
-			params: {
-				_id: null
-			}
-
+            controller  : 'GameDetailController as gDetailController'
         })
 };

@@ -1,3 +1,4 @@
+require('angular/angular');
 var playerModule = angular.module('webs6.player', []);
 
 var playerController = require('../Controllers/PlayerController');

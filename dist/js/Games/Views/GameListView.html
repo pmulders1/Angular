@@ -21,7 +21,7 @@
     		<td>{{ game.state }}</td>
     		<td>{{ game.createdOn }}</td>
     		<td>{{ game.players.length }}</td>
-    		<td><input type="button" value="Join Race" ng-click="gList.addUser(game._id)" ng-show="game.state == 'open'"><a ui-sref="gamedetail({_id:game._id})" ui-sref-active="active" nav-transition="none">Details</a></td>
+    		<td><input type="button" value="Join Race" ng-click="gList.addUser(game._id)" ng-show="game.state == 'open'"><a ui-sref="gamedetail({id:game._id})" ui-sref-active="active" nav-transition="none">Details</a></td>
     	</tr>
     </tbody>
 </table>

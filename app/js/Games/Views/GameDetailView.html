@@ -29,7 +29,7 @@
 		<p class="floatLeft fontSize13"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.gameTemplate._id }}</p>
 	</div>
 	<div class="col-md-6 absolute top250" >
-		<div class="absolute" ng-repeat='tile in gDetailController.game.tiles' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)" style="left:{{tile.xPos * 36}}px; top:{{tile.yPos * 45}}px; z-index:{{tile.zPos}}">
+		<div class="absolute" ng-repeat='tile in gDetailController.game.tiles.data' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)" style="left:{{tile.xPos * 36}}px; top:{{tile.yPos * 45}}px; z-index:{{tile.zPos}}">
 			<div class="tile {{tile.tile.suit}}{{tile.tile.name}}"></div>
 		</div>
 	</div>
