@@ -3,6 +3,7 @@ var Game = require('../Models/Game');
 module.exports = function($scope, GameService, $stateParams){
 	var self = this;
 	self.games = [];
+	self.gameTemplates = [];
 	self.status;
 	self.gameId = $stateParams.gameId;
 	
@@ -11,18 +12,29 @@ module.exports = function($scope, GameService, $stateParams){
 
 	self.game = {
 		"templateName": "","minPlayers": 0,"maxPlayers": 0
-		//"_id":"","createdBy":{},"createdOn":"","gameTemplate":{},"__v":0,"players":[],"maxPlayers":0,"minPlayers":0,"state":"open"
 	}
 
 	getGames();
+	getGameTemplates();
 
 	function getGames(){
-
 		GameService.getGames(function(response){
-			if(response.status == '200'){
+			if(response.status == 200){
 				for(var i = 0; i < response.data.length; i++){
 					var game = new Game(response.data[i]);
 					self.games.push(game);
+				}
+			} else {
+				self.status = 'Unable to load customer data: ' + error.message;
+			}
+		});
+	}
+
+	function getGameTemplates(){
+		GameService.getGameTemplates(function(response){
+			if(response.status == 200){
+				for(var i = 0; i < response.data.length; i++){
+					self.gameTemplates.push(response.data[i]._id);
 				}
 			} else {
 				self.status = 'Unable to load customer data: ' + error.message;

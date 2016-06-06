@@ -10,6 +10,14 @@ module.exports = function($http){
         });
     };
 
+    service.getGameTemplates = function (callback) {
+        $http.get(urlBase + "/GameTemplates").then(function(response){
+            if(callback) callback(response);
+        }, function(err){
+            if(callback) callback(err);
+        });
+    };
+
     service.addGame = function(newGame, callback){
         $http.post(urlBase + "/Games", newGame).then(function(response){
             if(callback) callback(response);

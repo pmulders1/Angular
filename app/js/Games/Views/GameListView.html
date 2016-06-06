@@ -8,7 +8,7 @@
 <table class="table table-striped">
     <thead>
       <tr>
-        <th>_id:</th>
+        <th>Created by:</th>
         <th>State:</th>
         <th>Created on:</th>
         <th>Players:</th>
@@ -17,11 +17,11 @@
     </thead>
     <tbody>
     	<tr ng-repeat="game in gList.games | filter:searchText | filter:myFilter">
-    		<td>{{ game._id }}</td>
+    		<td>{{ game.createdBy.name }}</td>
     		<td>{{ game.state }}</td>
     		<td>{{ game.createdOn }}</td>
-    		<td>{{ game.players.length }}</td>
-    		<td><input type="button" value="Join Race" ng-click="gList.addUser(game._id)" ng-show="game.state == 'open'"><a ui-sref="gamedetail({id:game._id})" ui-sref-active="active" nav-transition="none">Details</a></td>
+    		<td>{{ game.players.length }} / {{ game.maxPlayers }}</td>
+    		<td><input type="button" class="btn btn-success right10" value="Join Game" ng-click="gList.addUser(game._id)" ng-show="game.state == 'open' && game.players.length < game.maxPlayers"><a class="btn btn-primary" ui-sref="gamedetail({id:game._id})" ui-sref-active="active" nav-transition="none">Details</a></td>
     	</tr>
     </tbody>
 </table>

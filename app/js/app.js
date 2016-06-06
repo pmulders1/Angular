@@ -5,10 +5,7 @@ TODO:
 - Css verbeteren
 	- applicatie centreren
 	- Messages verbeteren
-- Lijst van games zien hoeveel players en max players.
-- Lijst van games button uitzetten als je niet mag joinen.
 - Profile/Homepage
-- Services ombouwen + de aanroepende functies
 - TESTS!!!
 
 Vragen
