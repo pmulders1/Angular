@@ -1,0 +1,15 @@
+<div class="alert alert-info" ng-if="gDetailController.succesMessage != ''">
+  {{ gDetailController.succesMessage }}
+</div>
+<div class="alert alert-danger" ng-if="gDetailController.errorMessage != ''">
+  {{ gDetailController.errorMessage }}
+</div>
+<div class="row">
+	<ul class="nav nav-tabs">
+        <li ui-sref=".details" ui-sref-active="active"><a>Details</a></li>
+        <li ui-sref=".players" ui-sref-active="active"><a>Players</a></li>
+        <li ui-sref=".board" ui-sref-active="active"><a>Gameboard</a></li>
+    </ul>
+
+	<div ui-view></div>
+</div>

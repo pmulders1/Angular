@@ -1,0 +1,18 @@
+<div class="floatRight">
+	<table style="width:100%" class="table table-striped">
+		<thead>
+	      <tr>
+	        <th>Match #1</th>
+	        <th>Match #2</th>
+	        <th>Matched by</th>
+	      </tr>
+	    </thead>
+	    <tbody>
+			<tr ng-repeat="match in gDetailController.game.matched">
+				<td><div class="tile tiny {{match.tile1.suit}}{{match.tile1.name}}"></div></td>
+				<td><div class="tile tiny {{match.tile2.suit}}{{match.tile2.name}}"></div></td> 
+				<td>{{match.player.foundBy}}</br>{{match.player.foundOn}}</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
