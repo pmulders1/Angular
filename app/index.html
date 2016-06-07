@@ -7,9 +7,13 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 		<link rel="stylesheet" href="./css/style.css">
-
+		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	</head>
-	<body ng-controller="HomeController">
+	<body ng-controller="HomeController" class="theme-{{currentTheme}}">
 
 	 	<!-- HEADER AND NAVBAR -->
 	    <header>
@@ -18,12 +22,13 @@
 	            <div class="navbar-header">
 	                <a class="navbar-brand" href="/">Angular Majong</a>
 	            </div>
-
+	            <div class="navbar-header floatRight">
+	            	<span>Select theme:</span>
+		            <select ng-model="currentTheme" class="top15">
+					   <option ng-repeat="tmp in themes" value="{{ tmp }}">{{ tmp }}</option>
+					</select>
+				</div>
 	            <ul class="nav navbar-nav navbar-right">
-	            	<li><a class="tab-item" ui-sref="home" ui-sref-active="active" nav-transition="none">
-			            <i class="fa fa-home"></i>
-			            Home
-			        </a></li>
 			        <li><a class="tab-item" ui-sref="games" ui-sref-active="active" nav-transition="none">
 			            <i class="fa fa-shield"></i>
 			            Games
@@ -34,6 +39,7 @@
 			        </a></li>
 	                <li><a href="http://mahjongmayhem.herokuapp.com/auth/avans?callbackUrl=http://localhost:3000/%23/authcallback"><i class="fa fa-shield"></i> Login</a></li>
 	            </ul>
+	            
 	        </div>
 	        </nav>
 	    </header>

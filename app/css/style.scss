@@ -1,3 +1,12 @@
+$themes: (
+  theme-indie: (font-family: 'Indie Flower'), 
+  theme-titillium: (font-family: 'Titillium Web'), 
+  theme-montserrat: (font-family: 'Montserrat'), 
+  theme-josefin: (font-family: 'Josefin Sans'), 
+  theme-architects: (font-family: 'Architects Daughter')
+);
+
+
 @import "config.scss";
  
 .contentWidth {
@@ -26,5 +35,13 @@
 .absolute{ 
 	position:absolute;
 }
+
+
+@each $theme, $map in $themes {
+  .#{$theme} {
+    font-family: map-get($map, font-family);
+  }
+}
+
 
 @import "tile.scss";

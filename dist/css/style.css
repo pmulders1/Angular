@@ -858,6 +858,26 @@
   position: absolute;
 }
 
+.theme-indie {
+  font-family: "Indie Flower";
+}
+
+.theme-titillium {
+  font-family: "Titillium Web";
+}
+
+.theme-montserrat {
+  font-family: "Montserrat";
+}
+
+.theme-josefin {
+  font-family: "Josefin Sans";
+}
+
+.theme-architects {
+  font-family: "Architects Daughter";
+}
+
 .tile {
   background-image: url("./../images/sprites.png");
   width: 70px;

@@ -13,7 +13,7 @@ Vragen
 - Een match is gemaakt maar het bord is nog hetzelfde moeten mogen we het scherm gewoon refreshen?
 - Sockets example
 - Match comparer
-- Sass krijgen we niet geinstalleerd.
+- Moeten wij zelf een functie canJoinGame maken? want zover wij weten krijgen we al een goede response terug.
 - uit de rubic: 
 	Maak hier slechts gebruik van 1 lijst van tegels per game.
 	Als gebruiker wil ik verschillende lobby's van games (leeg, spectate, history)
@@ -28,16 +28,14 @@ require('angular-ui-router/release/angular-ui-router');
 // Create your app
 var app = angular.module('webs6', [
     'ui.router',
-    'webs6.game',
-    'webs6.player',
     'webs6.home',
+    'webs6.game',
     'webs6.auth',
     'webs6.gamedetail'
 ]);
 
-require('./Games/Module/GameModule');
-require('./Player/Module/PlayerModule');
 require('./Home/Module/HomeModule');
+require('./Games/Module/GameModule');
 require('./Auth/Module/AuthModule');
 require('./Games/Module/GameDetailModule');
 
