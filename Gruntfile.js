@@ -42,8 +42,8 @@ module.exports = function(grunt) {
                 tasks: 'copy'
             },
             css: {
-                files: 'app/**/*.css',
-                tasks: 'copy'
+                files: 'app/**/*.scss',
+                tasks: 'sass'
             },
             images: {
                 files: 'app/**/*.png',

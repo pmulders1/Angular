@@ -5,6 +5,6 @@ module.exports = function($stateProvider, $locationProvider) {
         	//template: ' ',
         	url: '/authcallback?:username&:token',
             templateUrl : './js/Auth/Views/PlayerProfile.html',
-            controller  : 'PlayerController'
+            controller  : 'AuthController'
         });
 };

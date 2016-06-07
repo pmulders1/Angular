@@ -6,4 +6,10 @@
 .floatRight{ float: right; }
 .floatLeft{ float: left; }
 
-.top250{top:250px;}
+@for $i from 1 through 50 {
+	$x: $i * 5;
+	.top#{$i * 5}{ margin-top: $x }
+	.bot#{$i * 5}{ margin-bottom: $x }
+	.right#{$i * 5}{ margin-right: $x }
+	.left#{$i * 5}{ margin-left: $x }
+}

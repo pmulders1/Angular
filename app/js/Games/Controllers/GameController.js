@@ -59,12 +59,16 @@ module.exports = function($scope, GameService, $stateParams){
 		self.succesMessage = '';
 		self.errorMessage = '';
 
-		GameService.addGame(Game, function(response){
-			if(response.status == 200){
-				self.succesMessage = "Game has been succesfully created!";
-			} else {
-				self.errorMessage = response.data.message;
-			}
-		});
+		if(Game.templateName == undefined || Game.maxPlayers < 1 || Game.minPlayers < 1 || Game.maxPlayers < Game.minPlayers){
+			self.errorMessage = "There is an error in one of the input fields. Please try again!"
+		}else{
+			GameService.addGame(Game, function(response){
+				if(response.status == 200){
+					self.succesMessage = "Game has been succesfully created!";
+				} else {
+					self.errorMessage = response.data;
+				}
+			});
+		}
 	}
 }
