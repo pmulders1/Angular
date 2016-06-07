@@ -48,7 +48,7 @@ describe("GameCtrl", function(){
 			// gameCtrl.games
 		});
 
-		it("should call addGame once", function(){
+		it("should call addGame once", function(done){
 			
 			var game = { 
 				"templateName": "Ox","minPlayers": 1,"maxPlayers": 2
@@ -69,6 +69,8 @@ describe("GameCtrl", function(){
 			expect(actual.templateName).to.equal(game.templateName);
 			expect(actual.minPlayers).to.equal(game.minPlayers);
 			expect(actual.maxPlayers).to.equal(game.maxPlayers);
+
+			
 		});
 	});
 });

@@ -1,7 +1,6 @@
 /*
 
 TODO: 
-- Gametemplates ophalen
 - Css verbeteren
 	- applicatie centreren
 	- Messages verbeteren
@@ -13,6 +12,7 @@ Vragen
 - Er komt een fout op bij het runnen van npm test -> angular not found. Wat moeten we doen om dit op te lossen?
 - Een match is gemaakt maar het bord is nog hetzelfde moeten mogen we het scherm gewoon refreshen?
 - Sockets example
+- Match comparer
 - Sass krijgen we niet geinstalleerd.
 - uit de rubic: 
 	Maak hier slechts gebruik van 1 lijst van tegels per game.

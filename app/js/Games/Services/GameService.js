@@ -28,7 +28,6 @@ module.exports = function($http){
 
     service.addUser = function(_id, callback){
     	$http.post(urlBase + "/Games/"+ _id + "/Players").then(function(response){
-            console.log(response);
             if(callback) callback(response);
         }, function(err){
             if(callback) callback(err);
