@@ -5,6 +5,7 @@ TODO:
 	- applicatie centreren
 	- Messages verbeteren
 - Profile/Homepage
+- Error message over inloggen bij click op tile
 - TESTS!!!
 
 Vragen
@@ -41,4 +42,24 @@ require('./Games/Module/GameDetailModule');
 
 app.config(function ($httpProvider) {
   $httpProvider.interceptors.push('AuthService');
+});
+
+app.directive('tile', function(){
+	return{
+		restrict: 'E',
+		templateUrl: "./js/Directives/tileTemplate.html",
+		scope: {
+			tile: "=",
+			onSelect: "=?"
+		},
+		controller: function($scope){
+			var self = this;
+			self.canClick = function(tile){
+				self.onSelect(tile);
+				console.log(tile);
+			}
+		},
+		controllerAs: 't',
+        bindToController: true
+	}
 });

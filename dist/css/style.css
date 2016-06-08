@@ -878,6 +878,10 @@
   font-family: "Architects Daughter";
 }
 
+.clicked {
+  border: 3px solid red;
+}
+
 .tile {
   background-image: url("./../images/sprites.png");
   width: 70px;

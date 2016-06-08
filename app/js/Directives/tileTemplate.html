@@ -1,3 +1,3 @@
-<div class="">
-	<p>Ik ben een Tile - {{ tile.xPos }} - {{ tile.yPos }}!</p>
+<div class="absolute" ng-click="t.canClick(t.tile)" style="left:{{t.tile.xPos * 36 - t.tile.zPos * 5}}px; top:{{t.tile.yPos * 45 - t.tile.zPos * 5}}px; z-index:{{t.tile.zPos}}">
+		<div class="tile {{t.tile.tile.suit}}{{t.tile.tile.name}} {{t.tile.clicked}}"></div>
 </div>

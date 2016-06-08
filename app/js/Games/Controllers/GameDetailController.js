@@ -9,6 +9,7 @@ module.exports = function($scope, GameService, $stateParams) {
 
 	self.matchtiles = [];
 	self.possibleMatches = 0;
+    self.selected = null;
 
     GameService.getGameById($stateParams.id, function(response){
 
@@ -16,7 +17,7 @@ module.exports = function($scope, GameService, $stateParams) {
         	self.game = response.data;
 
             GameService.getOpenOrClosedMatches($stateParams.id, function(response){
-                self.game.tiles = response;
+                self.game.tiles = response.data;
             }, 'false');
 
         	GameService.getOpenOrClosedMatches($stateParams.id, function(response){
@@ -75,5 +76,40 @@ module.exports = function($scope, GameService, $stateParams) {
     	} else {
     		self.matchtiles.push(_tileid);
     	}
+    }
+
+    self.canClick = function(tile){
+        if(tile.clicked != "" && tile.clicked != null){
+            tile.clicked = "";
+            self.selected = null;
+        }else{
+            tile.clicked = "clicked";
+            angular.forEach(self.game.tiles, function(value, index){
+                
+                // Links
+                if(value.xPos == tile.xPos - 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
+                    tile.clicked = "";
+                    return;
+                }
+
+                // Rechts
+                if(value.xPos == tile.xPos + 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
+                    tile.clicked = "";
+                    return;
+                }
+
+                // Boven/Op
+                if((value.xPos >= tile.xPos - 1 && value.xPos <= tile.xPos + 1) && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos + 1){
+                    tile.clicked = "";
+                    return;
+                }
+            });
+
+            if(self.selected != null){
+                console.log("twee");
+            }else{
+                self.selected = tile;
+            }
+        }
     }
 }

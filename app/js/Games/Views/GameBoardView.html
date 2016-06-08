@@ -1,6 +1,4 @@
-<div class="col-md-6 absolute" >
-	<div class="absolute" ng-repeat='tile in gDetailController.game.tiles.data' ng-click="gDetailController.matchTiles(gDetailController.game._id, tile._id)" style="left:{{tile.xPos * 36 - tile.zPos * 5}}px; top:{{tile.yPos * 45 - tile.zPos * 5}}px; z-index:{{tile.zPos}}">
-		<div class="tile {{tile.tile.suit}}{{tile.tile.name}}"></div>
-	</div>
+<div class="col-md-6 absolute" ng-repeat="tile in gDetailController.game.tiles">
+	<tile tile="tile" on-select="gDetailController.canClick"></tile>
 </div>
 <div class="absolute bot250"> </div>
