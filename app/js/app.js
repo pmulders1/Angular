@@ -1,25 +1,22 @@
 /*
 
 TODO: 
-- Css verbeteren
-	- applicatie centreren
-	- Messages verbeteren
-- Profile/Homepage
+- Profile/Homepage -> doorsturen naar login + tonen dat iemand is ingelogd
+- Sockets
+- Refreshen viewelementen
+	- Gameboard
+	- Matches
+	- Details van game
+	- GameListview
+- Uitstraling van game detail views
+- Filters op matches
 - Error message over inloggen bij click op tile
-- TESTS!!!
+
+TOEVOEGING
+- Hints eventueel
 
 Vragen
-- We krijgen de directive niet aan de praat, de template wordt niet gevonden geeft een 404 not found terug
-- Er komt een fout op bij het runnen van npm test -> angular not found. Wat moeten we doen om dit op te lossen?
-- Een match is gemaakt maar het bord is nog hetzelfde moeten mogen we het scherm gewoon refreshen?
-- Sockets example
-- Match comparer
-- Moeten wij zelf een functie canJoinGame maken? want zover wij weten krijgen we al een goede response terug.
-- uit de rubic: 
-	Maak hier slechts gebruik van 1 lijst van tegels per game.
-	Als gebruiker wil ik verschillende lobby's van games (leeg, spectate, history)
-	Als gebruiker wil ik een tab binnen een game zien met het gameboard
-	Als gebruiker wil ik een tab binnen een game zien met alle gespeelde zetten
+
 */
 
 require('angular/angular');
@@ -56,7 +53,6 @@ app.directive('tile', function(){
 			var self = this;
 			self.canClick = function(tile){
 				self.onSelect(tile);
-				console.log(tile);
 			}
 		},
 		controllerAs: 't',

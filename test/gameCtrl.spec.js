@@ -14,63 +14,57 @@ describe("GameCtrl", function(){
 		});
 	});
 
-	describe('canJoinGame', function(){
-		// it('should return false when full', function(){
-
-		// 	var game = {
-		// 		minPlayers: 2,
-		// 		maxplayers: 3,
-		// 		players: [{}, {}, {}]
-		// 	};
-
-		// 	//act
-		// 	var result = gameCtrl.canJoinGame(game);
-
-		// 	expect(result).to.be.false;
-		// });
-		it('should return false when not open');
-		it('should return false when not logged in');
-		it('should return true when spot free');
-
-	});
-
-	
-
-	describe("getGames", function(){
-
-		it("should return 2 games", function(){
-
-			// // Arrange
-			// gameCtrl.getGames();
-			// // Act
-
-			// // Assert
-			// gameCtrl.games
+	describe('canCreateGame', function(){
+		it('should return false when game template is not given', function(){
+			//Arange
+			var game = {
+				templateName: undefined,
+				minPlayers: 1,
+				maxPlayers: 1
+			}
+			//Act
+			gameCtrl.addGame(game);
+			//Assert
+			expect(gameCtrl.errorMessage).to.be.equal("There is an error in one of the input fields. Please try again!");
 		});
 
-		it("should call addGame once", function(done){
-			
-			var game = { 
-				"templateName": "Ox","minPlayers": 1,"maxPlayers": 2
+		it('should return false when minPlayers is lower then 1', function(){
+			//Arange
+			var game = {
+				templateName: "Ox",
+				minPlayers: 0,
+				maxPlayers: 1
 			}
-
-			gameFactory.addGame = sinon.stub();
-			gameFactory.addGame.withArgs(game).returns({
-				then: function(callback){
-					callback({templateName: game.templateName, minPlayers: game.minPlayers, maxPlayers: game.maxPlayers })
-				}}
-			);
-
+			//Act
 			gameCtrl.addGame(game);
+			//Assert
+			expect(gameCtrl.errorMessage).to.be.equal("There is an error in one of the input fields. Please try again!");
+		});
 
-			expect(gameCtrl.succesMessage).to.be.equal("A game has been created");
+		it('should return false when maxPlayers is lower then 1', function(){
+			//Arange
+			var game = {
+				templateName: "Ox",
+				minPlayers: 1,
+				maxPlayers: 0
+			}
+			//Act
+			gameCtrl.addGame(game);
+			//Assert
+			expect(gameCtrl.errorMessage).to.be.equal("There is an error in one of the input fields. Please try again!");
+		});
 
-
-			//expect(actual.templateName).to.equal(game.templateName);
-			//expect(actual.minPlayers).to.equal(game.minPlayers);
-			//expect(actual.maxPlayers).to.equal(game.maxPlayers);
-
-			
+		it('should return false when maxPlayers is lower then minPlayers', function(){
+			//Arange
+			var game = {
+				templateName: "Ox",
+				minPlayers: 2,
+				maxPlayers: 1
+			}
+			//Act
+			gameCtrl.addGame(game);
+			//Assert
+			expect(gameCtrl.errorMessage).to.be.equal("There is an error in one of the input fields. Please try again!");
 		});
 	});
 });

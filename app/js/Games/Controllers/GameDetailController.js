@@ -2,6 +2,7 @@ module.exports = function($scope, GameService, $stateParams) {
 	var self = this;
 
 	self.game = '';
+    self.game.tiles = [];
 	self.username = window.localStorage['username'];
 
 	self.succesMessage = '';
@@ -9,7 +10,7 @@ module.exports = function($scope, GameService, $stateParams) {
 
 	self.matchtiles = [];
 	self.possibleMatches = 0;
-    self.selected = null;
+    self.selected = [];
 
     GameService.getGameById($stateParams.id, function(response){
 
@@ -79,37 +80,52 @@ module.exports = function($scope, GameService, $stateParams) {
     }
 
     self.canClick = function(tile){
-        if(tile.clicked != "" && tile.clicked != null){
+        if(self.selected.indexOf(tile) >= 0){
             tile.clicked = "";
-            self.selected = null;
+            self.selected.shift();
         }else{
             tile.clicked = "clicked";
+            
             angular.forEach(self.game.tiles, function(value, index){
-                
                 // Links
                 if(value.xPos == tile.xPos - 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
                     tile.clicked = "";
-                    return;
                 }
 
                 // Rechts
                 if(value.xPos == tile.xPos + 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
                     tile.clicked = "";
-                    return;
                 }
 
                 // Boven/Op
                 if((value.xPos >= tile.xPos - 1 && value.xPos <= tile.xPos + 1) && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos + 1){
                     tile.clicked = "";
-                    return;
                 }
             });
 
-            if(self.selected != null){
-                console.log("twee");
-            }else{
-                self.selected = tile;
+            if(tile.clicked == "clicked"){
+                self.selected.push(tile);
+                if(self.selected.length == 2){
+                    self.matchTiles(self.selected);
+                }
             }
         }
+    }
+    self.matchTiles = function(matches){
+        if((matches[0].tile.matchesWholeSuit && matches[1].tile.matchesWholeSuit && matches[0].tile.suit == matches[1].tile.suit) || (matches[0].tile.suit == matches[1].tile.suit && matches[0].tile.name == matches[1].tile.name)){
+            //Mag versturen
+            GameService.postMatchTiles(self.game._id, { tile1Id: matches[0]._id, tile2Id: matches[1]._id}, function(response){
+                GameService.getOpenOrClosedMatches(self.game_id, function(response){
+                    self.game.tiles = response.data;
+                }, 'false');
+            });
+        }else{
+            self.errorMessage = "You can't match those tiles! Please try again."
+        }
+        
+        for (var i = 0; i < matches.length; i++) {
+            matches[i].clicked = "";
+        }
+        self.selected = [];
     }
 }
