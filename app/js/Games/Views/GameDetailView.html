@@ -1,11 +1,10 @@
-<div class="col-md-5">
-	<span class="label label-default">{{ gDetailController.game._id }}</span>
-	<span class="label label-default floatRight {{ gDetailController.game.state }}">{{ gDetailController.game.state }}</span>
-	<input type="button" value="Start Race" ng-click="gDetailController.startGame(gDetailController.game._id)" ng-show="gDetailController.game.state == 'open' && gDetailController.game.createdBy._id == gDetailController.username">
+<div class="col-md-12 top20">
+	<span class="label label-default">GameId: {{ gDetailController.game._id }}</span>
+	<span class="label label-default floatRight {{ gDetailController.game.state }}">State: {{ gDetailController.game.state }}</span>
 	<table class="table table-striped">
 	    <thead>
 	      <tr>
-	        <th>Player id:</th>
+	        <th>Player email:</th>
 	        <th>Name:</th>
 	      </tr>
 	    </thead>
@@ -16,8 +15,10 @@
 	    	</tr>
 	    </tbody>
 	</table>
-	<p class="floatLeft fontSize13"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.createdOn }}</p>
-	<p class="floatRight fontSize13"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - {{ gDetailController.game.createdBy.name }}</p>
-	<span class="label label-default">#{{ gDetailController.possibleMatches }} matches</span>
-	<p class="floatLeft fontSize13"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.gameTemplate._id }}</p>
+	<p class="floatLeft fontSize13 right15"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.createdOn }}</p>
+	<p class="floatRight fontSize13 right15"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - {{ gDetailController.game.createdBy.name }}</p>
+	<p class="floatLeft fontSize13 right15"><span class="glyphicon glyphicon-folder-open right5" aria-hidden="true"></span> -  {{ gDetailController.game.gameTemplate._id }}</p>
+	<p class="floatLeft fontSize13 right10"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> - {{ gDetailController.possibleMatches }} matches</p>
 </div>
+<div style="clear:both"></div>
+<input type="button" class="btn btn-success top10 left10" value="Start Game" ng-click="gDetailController.startGame(gDetailController.game._id)" ng-show="gDetailController.game.state == 'open' && gDetailController.game.createdBy._id == gDetailController.username">

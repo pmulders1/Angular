@@ -4,7 +4,7 @@ module.exports = function($stateProvider, $locationProvider) {
         .state('authcallback', {
         	//template: ' ',
         	url: '/authcallback?:username&:token',
-            templateUrl : './js/Auth/Views/PlayerProfile.html',
+            templateUrl: './js/Games/Views/GameListView.html',
             controller  : 'AuthController'
         });
 };

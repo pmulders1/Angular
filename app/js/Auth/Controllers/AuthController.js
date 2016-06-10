@@ -1,11 +1,16 @@
-module.exports = function($scope, $stateParams, $state){
+module.exports = function($scope, AuthService, $stateParams, $state){
 	var self = this;
-	if(window.localStorage['token'] == undefined && window.localStorage['username'] == undefined){
-		if($stateParams.token != undefined && $stateParams.username != undefined){
-			window.localStorage['token'] = $stateParams.token;
-			window.localStorage['username'] = $stateParams.username;
+
+	self.login = function(){
+		if(!AuthService.isLoggedIn()){
+			if($stateParams.token != undefined && $stateParams.username != undefined){
+				window.localStorage['token'] = $stateParams.token;
+				window.localStorage['username'] = $stateParams.username;
+			}
 		}
+		
+		$state.go('games');
 	}
-	
-	$state.go('games');
+
+	self.login();
 }

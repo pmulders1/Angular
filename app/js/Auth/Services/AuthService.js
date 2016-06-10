@@ -1,11 +1,25 @@
 module.exports = function () {
-  return {
-    request: function (config) {
+	return {
+		request: request,
+		isLoggedIn: isLoggedIn,
+		getUser: getUser
+	};
 
-      config.headers['X-username'] = window.localStorage['username'] != undefined ? window.localStorage['username'] : null;
-      config.headers['X-token'] = window.localStorage['token'] != undefined ? window.localStorage['token'] : null;
+	function request(config) {
 
-      return config;
-    }
-  };
+		config.headers['X-username'] = window.localStorage['username'] != undefined ? window.localStorage['username'] : null;
+		config.headers['X-token'] = window.localStorage['token'] != undefined ? window.localStorage['token'] : null;
+
+		return config;
+	}
+
+	function isLoggedIn(){
+		return window.localStorage['token'] != undefined && window.localStorage['username'] != undefined;
+	}
+
+	function getUser(){
+		if(self.isLoggedIn()){
+			return window.localStorage['username'];
+		}
+	}
 };
