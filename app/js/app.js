@@ -7,9 +7,9 @@ TODO:
 	- Matches
 	- Details van game
 	- GameListview
-- Uitstraling van game detail views
-- Filters op matches
-- Error message over inloggen bij click op tile
+- Eindigen van een match
+- Laten zien hoeveel matches er mogelijk zijn
+- Spritesheets
 
 TOEVOEGING
 - Hints eventueel
@@ -29,6 +29,7 @@ var app = angular.module('webs6', [
     'webs6.home',
     'webs6.game',
     'webs6.auth',
+    'webs6.socket',
     'webs6.gamedetail',
     'permission'
 ]);
@@ -37,6 +38,7 @@ require('./Home/Module/HomeModule');
 require('./Games/Module/GameModule');
 require('./Auth/Module/AuthModule');
 require('./Games/Module/GameDetailModule');
+require('./Socket/Module/SocketModule');
 
 app.config(function ($httpProvider) {
   $httpProvider.interceptors.push('AuthService');

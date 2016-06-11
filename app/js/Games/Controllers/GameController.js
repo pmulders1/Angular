@@ -1,12 +1,14 @@
 var Game = require('../Models/Game');
 
-module.exports = function($scope, GameService, $stateParams){
+module.exports = function($scope, AuthService,GameService, $stateParams){
 	var self = this;
 	self.games = [];
 	self.gameTemplates = [];
 	self.status;
 	self.gameId = $stateParams.gameId;
 	
+	self.userId = AuthService.getUser();
+
 	self.succesMessage = '';
 	self.errorMessage = '';
 
@@ -71,4 +73,15 @@ module.exports = function($scope, GameService, $stateParams){
 			});
 		}
 	}
+
+	self.changeModel = function(bool){ 
+        $scope.model = !bool ? undefined : self.userId;
+    }
+
+    $scope.myGames = function(model){
+        if($scope.model == undefined){
+            return true;
+        }
+        return model.createdBy._id == $scope.model ? true : false;
+    }
 }

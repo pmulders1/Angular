@@ -18,7 +18,7 @@ module.exports = function () {
 	}
 
 	function getUser(){
-		if(self.isLoggedIn()){
+		if(isLoggedIn()){
 			return window.localStorage['username'];
 		}
 	}

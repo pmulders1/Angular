@@ -13,3 +13,30 @@
 	.right#{$i * 5}{ margin-right: $x }
 	.left#{$i * 5}{ margin-left: $x }
 }
+
+.contentWidth {
+	width: 90%!important;
+	margin: 0 auto;
+}
+ 
+.content320{
+	width: 320px;
+	margin: 0 auto;
+
+	h1, h4 {
+		text-align: initial;
+	}
+
+	select, input{
+		width: 100%;
+	}
+}
+.open{ background-color: #337ab7!important; }
+.playing{ background-color: #5cb85c!important; }
+.finished{ background-color: #d9534f!important; }
+
+.fontSize13{ font-size: 13px; }
+
+.absolute{ 
+	position:absolute;
+}

@@ -1,6 +1,3 @@
-/**
- * Created by Nevernown on 18-4-2016.
- */
 module.exports = function(grunt) {
     grunt.initConfig({
         browserify: {
@@ -28,7 +25,12 @@ module.exports = function(grunt) {
                     style: 'expanded'
                 },
                 files: {
-                    'dist/css/style.css' : 'app/css/style.scss'
+                    'dist/css/style.css'        : 'app/css/style.scss',
+                    'dist/css/montserrat.css'   : 'app/css/font/montserrat.scss',
+                    'dist/css/architects.css'   : 'app/css/font/architects.scss',
+                    'dist/css/indie.css'        : 'app/css/font/indie.scss',
+                    'dist/css/josefin.css'      : 'app/css/font/josefin.scss',
+                    'dist/css/titillium.css'    : 'app/css/font/titillium.scss',
                 }
             }
         },

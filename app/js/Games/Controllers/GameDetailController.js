@@ -1,8 +1,9 @@
-module.exports = function($scope, GameService, $stateParams) {
+module.exports = function($scope, GameService, SocketService, $stateParams) {
 	var self = this;
 
 	self.game = '';
     self.game.tiles = [];
+    self.game.players = [];
 	self.username = window.localStorage['username'];
 
 	self.succesMessage = '';
@@ -12,34 +13,94 @@ module.exports = function($scope, GameService, $stateParams) {
 	self.possibleMatches = 0;
     self.selected = [];
 
-    GameService.getGameById($stateParams.id, function(response){
+    SocketService.connect($stateParams.id);
 
+    SocketService.listenStart(function(){
+        self.game.state = 'playing';
+        self.getGameData();
+        self.succesMessage = "Game has started!";
+    });
+
+    SocketService.listenEnd(function(){
+        self.game.state = 'end';
+        self.getGameData();
+        self.errorMessage = "Game has ended!";
+    });
+
+    SocketService.listenPlayerJoined(function(data){
+        self.game.players.push(data);
+    });
+
+    SocketService.listenMatch(function(data){
+        console.log(data);
+        console.log(self.game.tiles.length);
+        console.log(self.game.tiles.indexOf(data[0]._id));
+        for(var i = 0; i < self.game.tiles.length; i++){
+            if(self.game.tiles[i]._id == data[0]._id){
+                console.log("Splitting first");
+                //self.game.tiles.splice(i, 1);
+                //delete self.game.tiles[i];
+                self.game.tiles[i].matched = true;
+                break;
+            }
+        }
+        for(var i = 0; i < self.game.tiles.length; i++){
+            if(self.game.tiles[i]._id == data[1]._id){
+                console.log("Splitting second");
+                //self.game.tiles.splice(i, 1);
+                //delete self.game.tiles[i];
+                self.game.tiles[i].matched = true;
+                break;
+            }
+        }
+        console.log(self.game.tiles);
+        //self.getNumberOfPossibleMatches();
+        //self.getMatchedTiles();
+    });
+
+    GameService.getGameById($stateParams.id, function(response){
+        
         if(response.status == 200){
         	self.game = response.data;
 
-            GameService.getOpenOrClosedMatches($stateParams.id, function(response){
-                self.game.tiles = response.data;
-            }, 'false');
-
-        	GameService.getOpenOrClosedMatches($stateParams.id, function(response){
-    			self.possibleMatches = response.length;
-    		},'false');
-
-            GameService.getMatchedTiles($stateParams.id, function(response){
-                self.game.matched = [];
-                for(var i = 0; i < response.data.length; i+=2){
-                    var match = {
-                        "tile1":response.data[i].tile,
-                        "tile2":response.data[i+1].tile,
-                        "player":response.data[i].match
-                    }
-                    self.game.matched.push(match);
-                }
-            });
+            if(self.game.state != 'open'){
+                self.getGameData();
+            }
         } else {
             self.errorMessage = response.data.message;
         }
     });
+
+    self.getGameData = function(){
+        GameService.getOpenOrClosedMatches($stateParams.id, function(response){
+            self.game.tiles = response.data;
+        }, 'false');
+
+        self.getNumberOfPossibleMatches();
+
+        self.getMatchedTiles();
+    }
+
+    self.getNumberOfPossibleMatches = function(){
+        // TODO AANPASSEN!!
+        GameService.getOpenOrClosedMatches($stateParams.id, function(response){
+            self.possibleMatches = response.data.length / 2;
+        }, 'false');
+    }
+
+    self.getMatchedTiles = function(){
+        GameService.getMatchedTiles($stateParams.id, function(response){
+            self.game.matched = [];
+            for(var i = 0; i < response.data.length; i+=2){
+                var match = {
+                    "tile1":response.data[i].tile,
+                    "tile2":response.data[i+1].tile,
+                    "player":response.data[i].match
+                }
+                self.game.matched.push(match);
+            }
+        });
+    }
 
     self.startGame = function(_id){
     	GameService.startGame(_id, function(response){
@@ -49,34 +110,6 @@ module.exports = function($scope, GameService, $stateParams) {
                 self.errorMessage = response.data.message;
             }
     	});
-    }
-
-    self.matchTiles = function(_id, _tileid){
-    	self.succesMessage = '';
-		self.errorMessage = '';
-
-    	if(self.matchtiles.length > 0){
-    		var data = {
-    			tile1Id: self.matchtiles[0],
-    			tile2Id: _tileid
-    		}
-
-    		GameService.postMatchTiles(_id, data, function(response){
-                if(response.status == 200){
-                    self.succesMessage = "Tiles are a match!";
-                } else {
-                    self.errorMessage = response.data.message;
-                }
-    		});
-
-    		GameService.getOpenOrClosedMatches(_id, function(response){
-				self.possibleMatches = response.length;
-			}, 'false');
-
-    		self.matchtiles = [];
-    	} else {
-    		self.matchtiles.push(_tileid);
-    	}
     }
 
     self.canClick = function(tile){
@@ -126,6 +159,18 @@ module.exports = function($scope, GameService, $stateParams) {
         for (var i = 0; i < matches.length; i++) {
             matches[i].clicked = "";
         }
+
         self.selected = [];
+    }
+
+    self.changeMatch = function(index){ 
+        $scope.match = index < 0 ? undefined : self.game.players[index]._id;
+    }
+
+    $scope.search = function(model){
+        if($scope.match == undefined){
+            return true;
+        }
+        return model.player.foundBy == $scope.match ? true : false;
     }
 }

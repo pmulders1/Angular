@@ -1,4 +1,4 @@
-<html lang="en" ng-app="webs6">
+<html lang="en" ng-app="webs6" ng-controller="HomeController">
 	<head>
    		<!-- The css is copied into dist/css/app.css by the copy task -->
    		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -6,14 +6,15 @@
     	<!-- Latest compiled and minified CSS -->
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-		<link rel="stylesheet" href="./css/style.css">
+		
+		<link rel="stylesheet" href="./css/{{currentTheme}}.css">
 		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
 	</head>
-	<body ng-controller="HomeController" class="theme-{{currentTheme}}">
+	<body class="theme">
 
 	 	<!-- HEADER AND NAVBAR -->
 	    <header>
@@ -55,5 +56,6 @@
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+		<script src="http://mahjongmayhem.herokuapp.com/socket.io/socket.io.js"></script>
 	</body>
 </html>

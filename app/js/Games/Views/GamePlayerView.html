@@ -1,4 +1,7 @@
-<div class="floatRight">
+<div class="top10">
+	<button ng-repeat="player in gDetailController.game.players" type="button" class="btn btn-primary right10" ng-click="gDetailController.changeMatch($index)">{{ player.name }}</button>
+	<button type="button" class="btn btn-warning right10" ng-click="gDetailController.changeMatch(-1)">Clear</button>
+	<label class="floatRight">Search: <input ng-model="searchText"></label>
 	<table style="width:100%" class="table table-striped">
 		<thead>
 	      <tr>
@@ -8,7 +11,7 @@
 	      </tr>
 	    </thead>
 	    <tbody>
-			<tr ng-repeat="match in gDetailController.game.matched">
+			<tr ng-repeat="match in gDetailController.game.matched  | filter:searchText | filter:search ">
 				<td><div class="tile tiny {{match.tile1.suit}}{{match.tile1.name}}"></div></td>
 				<td><div class="tile tiny {{match.tile2.suit}}{{match.tile2.name}}"></div></td> 
 				<td>{{match.player.foundBy}}</br>{{match.player.foundOn}}</td>

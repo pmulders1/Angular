@@ -1,3 +1,23 @@
+.theme-indie {
+  font-family: "Indie Flower";
+}
+
+.theme-titillium {
+  font-family: "Titillium Web";
+}
+
+.theme-montserrat {
+  font-family: "Montserrat";
+}
+
+.theme-josefin {
+  font-family: "Josefin Sans";
+}
+
+.theme-architects {
+  font-family: "Architects Daughter";
+}
+
 .right5 {
   margin-right: 5px;
 }
@@ -856,26 +876,6 @@
 
 .absolute {
   position: absolute;
-}
-
-.theme-indie {
-  font-family: "Indie Flower";
-}
-
-.theme-titillium {
-  font-family: "Titillium Web";
-}
-
-.theme-montserrat {
-  font-family: "Montserrat";
-}
-
-.theme-josefin {
-  font-family: "Josefin Sans";
-}
-
-.theme-architects {
-  font-family: "Architects Daughter";
 }
 
 .clicked {
