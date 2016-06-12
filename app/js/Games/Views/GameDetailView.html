@@ -18,7 +18,7 @@
 	<p class="floatLeft fontSize13 right15"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span> - {{ gDetailController.game.createdOn }}</p>
 	<p class="floatRight fontSize13 right15"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> - {{ gDetailController.game.createdBy.name }}</p>
 	<p class="floatLeft fontSize13 right15"><span class="glyphicon glyphicon-folder-open right5" aria-hidden="true"></span> -  {{ gDetailController.game.gameTemplate._id }}</p>
-	<p class="floatLeft fontSize13 right10"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> - {{ gDetailController.possibleMatches }} matches</p>
+	<p class="floatLeft fontSize13 right10"><span class="glyphicon glyphicon-asterisk" aria-hidden="true"></span> - {{ gDetailController.possibleMatches.length / 2 }} possible matches</p>
 </div>
 <div style="clear:both"></div>
 <input type="button" class="btn btn-success top10 left10" value="Start Game" ng-click="gDetailController.startGame(gDetailController.game._id)" ng-show="gDetailController.game.state == 'open' && gDetailController.game.createdBy._id == gDetailController.username">

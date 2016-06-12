@@ -12,6 +12,7 @@ module.exports = function (config) {
             './node_modules/angular-mocks/angular-mocks.js',
             './node_modules/angular/angular.js',
             './node_modules/angular-resource/angular-resource.js',
+            'http://mahjongmayhem.herokuapp.com/socket.io/socket.io.js',
             'test/*.spec.js'
         ],
  

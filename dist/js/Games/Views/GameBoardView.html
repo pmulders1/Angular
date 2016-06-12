@@ -1,5 +1,6 @@
-<p>{{ gDetailController.game.tiles }}</p>
+<h1 class="alignCenter" ng-show="gDetailController.game.state == 'open'">Game hasn't started yet!</h1>
+<div class="top15"><span class="label label-default top15">{{ gDetailController.possibleMatches.length / 2 }} possible matches</span></div>
 <div class="col-md-6 absolute" ng-repeat="tile in gDetailController.game.tiles">
-	<tile tile="tile" on-select="gDetailController.canClick" ng-show="!tile.matched"></tile>
+	<tile tile="tile" on-select="gDetailController.CheckMatch" ng-show="!tile.matched"></tile>
 </div>
 <div class="absolute bot250"> </div>

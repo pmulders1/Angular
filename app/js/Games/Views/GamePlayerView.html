@@ -1,4 +1,5 @@
 <div class="top10">
+	<h1 class="alignCenter" ng-show="gDetailController.game.state == 'open'">Game hasn't started yet!</h1>
 	<button ng-repeat="player in gDetailController.game.players" type="button" class="btn btn-primary right10" ng-click="gDetailController.changeMatch($index)">{{ player.name }}</button>
 	<button type="button" class="btn btn-warning right10" ng-click="gDetailController.changeMatch(-1)">Clear</button>
 	<label class="floatRight">Search: <input ng-model="searchText"></label>

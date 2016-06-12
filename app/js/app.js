@@ -1,13 +1,6 @@
 /*
 
 TODO: 
-- Sockets
-- Refreshen viewelementen
-	- Gameboard
-	- Matches
-	- Details van game
-	- GameListview
-- Eindigen van een match
 - Laten zien hoeveel matches er mogelijk zijn
 - Spritesheets
 
@@ -54,7 +47,7 @@ app.directive('tile', function(){
 		},
 		controller: function($scope){
 			var self = this;
-			self.canClick = function(tile){
+			self.CheckMatch = function(tile){
 				self.onSelect(tile);
 			}
 		},

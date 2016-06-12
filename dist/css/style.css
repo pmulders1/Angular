@@ -42,6 +42,10 @@
   float: left;
 }
 
+.alignCenter {
+  text-align: center;
+}
+
 .top5 {
   margin-top: 5;
 }

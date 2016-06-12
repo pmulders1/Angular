@@ -10,7 +10,9 @@ module.exports = function () {
 	var socket;
 
 	function connect(gameId) {
-		socket = io.connect('http://mahjongmayhem.herokuapp.com?gameId=' + gameId);
+		if(io){
+			socket = io.connect('http://mahjongmayhem.herokuapp.com?gameId=' + gameId);
+		}
 	}
 
 	function listenStart(callback){

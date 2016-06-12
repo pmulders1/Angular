@@ -1,4 +1,4 @@
-describe("GameCtrl", function(){
+describe("GameDetailCtrl", function(){
 
 	var gameFactory;
 	var scope;
@@ -9,7 +9,7 @@ describe("GameCtrl", function(){
 		
 		inject(function($rootScope, $controller, $injector){
 			scope = $rootScope.$new();
-			gameFactory = $injector.get("GameService");
+			//gameFactory = $injector.get("GameService");
 			gameDetailCtrl = $controller("GameDetailController", {$scope: scope});
 		});
 	});
@@ -42,10 +42,8 @@ describe("GameCtrl", function(){
 			gameDetailCtrl.game.tiles.push(tile2);
 			gameDetailCtrl.game.tiles.push(tile3);
 
-			//Act
-			gameDetailCtrl.canClick(tile2);
-			//Assert
-			expect(tile2.clicked).to.be.equal("");
+			//Act && Assert
+			expect(gameDetailCtrl.canClick(tile2)).to.be.equal(false);
 		});
 
 		it('should return false when one tile on top', function(){
@@ -74,10 +72,8 @@ describe("GameCtrl", function(){
 			gameDetailCtrl.game.tiles.push(tile2);
 			gameDetailCtrl.game.tiles.push(tile3);
 
-			//Act
-			gameDetailCtrl.canClick(tile2);
-			//Assert
-			expect(tile2.clicked).to.be.equal("");
+			//Act && Assert
+			expect(gameDetailCtrl.canClick(tile2)).to.be.equal(false);
 		});
 
 		it('should return true when current tile on top', function(){
@@ -106,10 +102,8 @@ describe("GameCtrl", function(){
 			gameDetailCtrl.game.tiles.push(tile2);
 			gameDetailCtrl.game.tiles.push(tile3);
 
-			//Act
-			gameDetailCtrl.canClick(tile2);
-			//Assert
-			expect(tile2.clicked).to.be.equal("clicked");
+			//Act && Asserta
+			expect(gameDetailCtrl.canClick(tile2)).to.be.equal(true);
 		});
 
 	});
@@ -232,6 +226,102 @@ describe("GameCtrl", function(){
 			gameDetailCtrl.matchTiles(gameDetailCtrl.selected);
 			//Assert
 			expect(gameDetailCtrl.errorMessage).to.be.equal("You can't match those tiles! Please try again.");
+		});
+	});
+	describe("possibleMatches", function(){
+
+		it('should return 1 with two tiles which can match', function(){
+			gameDetailCtrl.game = {
+				tiles: []
+			}
+
+			// Arange
+			var tile1 = {
+				xPos: 1,
+				yPos: 1,
+				zPos: 1,
+				tile: {
+					suit: "Character",
+					name: "3",
+					matchesWholeSuit: false
+				}
+			}
+			var tile2 = {
+				xPos: 3,
+				yPos: 1,
+				zPos: 1,
+				tile: {
+					suit: "Wind",
+					name: "North",
+					matchesWholeSuit: false
+				}
+			}
+			var tile3 = {
+				xPos: 5,
+				yPos: 1,
+				zPos: 1,
+				tile: {
+					suit: "Character",
+					name: "3",
+					matchesWholeSuit: false
+				}
+			}
+
+			gameDetailCtrl.game.tiles.push(tile1);
+			gameDetailCtrl.game.tiles.push(tile2);
+			gameDetailCtrl.game.tiles.push(tile3);
+
+			//Act
+			gameDetailCtrl.getNumberOfPossibleMatches();
+			//Assert
+			expect(gameDetailCtrl.possibleMatches.length).to.be.equal(2);
+		});
+
+		it('should return 0 when tiles are on top of each other', function(){
+			gameDetailCtrl.game = {
+				tiles: []
+			}
+
+			// Arange
+			var tile1 = {
+				xPos: 1,
+				yPos: 1,
+				zPos: 0,
+				tile: {
+					suit: "Character",
+					name: "3",
+					matchesWholeSuit: false
+				}
+			}
+			var tile2 = {
+				xPos: 1,
+				yPos: 1,
+				zPos: 1,
+				tile: {
+					suit: "Wind",
+					name: "North",
+					matchesWholeSuit: false
+				}
+			}
+			var tile3 = {
+				xPos: 1,
+				yPos: 1,
+				zPos: 2,
+				tile: {
+					suit: "Character",
+					name: "3",
+					matchesWholeSuit: false
+				}
+			}
+
+			gameDetailCtrl.game.tiles.push(tile1);
+			gameDetailCtrl.game.tiles.push(tile2);
+			gameDetailCtrl.game.tiles.push(tile3);
+
+			//Act
+			gameDetailCtrl.getNumberOfPossibleMatches();
+			//Assert
+			expect(gameDetailCtrl.possibleMatches.length).to.be.equal(0);
 		});
 	});
 });

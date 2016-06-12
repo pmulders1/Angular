@@ -10,7 +10,7 @@ module.exports = function($scope, GameService, SocketService, $stateParams) {
 	self.errorMessage = '';
 
 	self.matchtiles = [];
-	self.possibleMatches = 0;
+	self.possibleMatches = [];
     self.selected = [];
 
     SocketService.connect($stateParams.id);
@@ -32,30 +32,7 @@ module.exports = function($scope, GameService, SocketService, $stateParams) {
     });
 
     SocketService.listenMatch(function(data){
-        console.log(data);
-        console.log(self.game.tiles.length);
-        console.log(self.game.tiles.indexOf(data[0]._id));
-        for(var i = 0; i < self.game.tiles.length; i++){
-            if(self.game.tiles[i]._id == data[0]._id){
-                console.log("Splitting first");
-                //self.game.tiles.splice(i, 1);
-                //delete self.game.tiles[i];
-                self.game.tiles[i].matched = true;
-                break;
-            }
-        }
-        for(var i = 0; i < self.game.tiles.length; i++){
-            if(self.game.tiles[i]._id == data[1]._id){
-                console.log("Splitting second");
-                //self.game.tiles.splice(i, 1);
-                //delete self.game.tiles[i];
-                self.game.tiles[i].matched = true;
-                break;
-            }
-        }
-        console.log(self.game.tiles);
-        //self.getNumberOfPossibleMatches();
-        //self.getMatchedTiles();
+        self.getGameData();
     });
 
     GameService.getGameById($stateParams.id, function(response){
@@ -74,18 +51,36 @@ module.exports = function($scope, GameService, SocketService, $stateParams) {
     self.getGameData = function(){
         GameService.getOpenOrClosedMatches($stateParams.id, function(response){
             self.game.tiles = response.data;
+
+            self.getNumberOfPossibleMatches();
+
+            self.getMatchedTiles();
         }, 'false');
-
-        self.getNumberOfPossibleMatches();
-
-        self.getMatchedTiles();
     }
 
     self.getNumberOfPossibleMatches = function(){
         // TODO AANPASSEN!!
-        GameService.getOpenOrClosedMatches($stateParams.id, function(response){
-            self.possibleMatches = response.data.length / 2;
-        }, 'false');
+        var clickAbleTiles = [];
+        self.possibleMatches = [];
+        var count = 0;
+
+        angular.forEach(self.game.tiles, function(value, index){
+            if(self.canClick(value)){
+                clickAbleTiles.push(value);
+            }
+        });
+        for(var i = 0; i < clickAbleTiles.length; i++){
+            for(var j = 0; j < clickAbleTiles.length; j++){
+                if(i == j) continue;
+
+                if((clickAbleTiles[i].tile.matchesWholeSuit && clickAbleTiles[j].tile.matchesWholeSuit && clickAbleTiles[i].tile.suit == clickAbleTiles[j].tile.suit) || (clickAbleTiles[i].tile.suit == clickAbleTiles[j].tile.suit && clickAbleTiles[i].tile.name == clickAbleTiles[j].tile.name)){
+                    if(self.possibleMatches.indexOf(clickAbleTiles[i]._id) == -1 && self.possibleMatches.indexOf(clickAbleTiles[j]._id) == -1){
+                        self.possibleMatches.push(clickAbleTiles[i]._id);
+                        self.possibleMatches.push(clickAbleTiles[j]._id);
+                    }
+                }
+            }
+        }
     }
 
     self.getMatchedTiles = function(){
@@ -111,38 +106,49 @@ module.exports = function($scope, GameService, SocketService, $stateParams) {
             }
     	});
     }
-
-    self.canClick = function(tile){
+    self.CheckMatch = function(tile){
         if(self.selected.indexOf(tile) >= 0){
             tile.clicked = "";
             self.selected.shift();
         }else{
-            tile.clicked = "clicked";
-            
-            angular.forEach(self.game.tiles, function(value, index){
-                // Links
-                if(value.xPos == tile.xPos - 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
-                    tile.clicked = "";
-                }
-
-                // Rechts
-                if(value.xPos == tile.xPos + 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
-                    tile.clicked = "";
-                }
-
-                // Boven/Op
-                if((value.xPos >= tile.xPos - 1 && value.xPos <= tile.xPos + 1) && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos + 1){
-                    tile.clicked = "";
-                }
-            });
-
-            if(tile.clicked == "clicked"){
+            if(self.canClick(tile)){
+                tile.clicked = "clicked";
                 self.selected.push(tile);
                 if(self.selected.length == 2){
                     self.matchTiles(self.selected);
                 }
+            } else {
+                tile.clicked = "";
             }
         }
+    }
+    self.canClick = function(tile){
+        var check = true;
+        var left = false;
+        var right = false;
+        var top = false;
+
+        angular.forEach(self.game.tiles, function(value, index){
+            if(value.xPos == tile.xPos - 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
+                left = true;
+            }
+
+            // Rechts
+            if(value.xPos == tile.xPos + 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
+                right = true;
+            }
+
+            // Boven/Op
+            if((value.xPos >= tile.xPos - 1 && value.xPos <= tile.xPos + 1) && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos + 1){
+                top  = true;
+            }
+            
+        });
+
+        if((left && right) || top) {
+            check = false;
+        }
+        return check;
     }
     self.matchTiles = function(matches){
         if((matches[0].tile.matchesWholeSuit && matches[1].tile.matchesWholeSuit && matches[0].tile.suit == matches[1].tile.suit) || (matches[0].tile.suit == matches[1].tile.suit && matches[0].tile.name == matches[1].tile.name)){
