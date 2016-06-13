@@ -124,29 +124,41 @@ module.exports = function($scope, GameService, SocketService, $stateParams) {
     }
     self.canClick = function(tile){
         var check = true;
-        var left = false;
-        var right = false;
-        var top = false;
+        var currentPlayer = false;
 
-        angular.forEach(self.game.tiles, function(value, index){
-            if(value.xPos == tile.xPos - 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
-                left = true;
-            }
+        for (var i = 0; i < self.game.players.length; i++) {
+            if(self.game.players[i]._id == self.username){
+                currentPlayer = true;
+            }       
+        }
 
-            // Rechts
-            if(value.xPos == tile.xPos + 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
-                right = true;
-            }
-
-            // Boven/Op
-            if((value.xPos >= tile.xPos - 1 && value.xPos <= tile.xPos + 1) && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos + 1){
-                top  = true;
-            }
-            
-        });
-
-        if((left && right) || top) {
+        if(!currentPlayer){
             check = false;
+        } else {
+            var left = false;
+            var right = false;
+            var top = false;
+
+            angular.forEach(self.game.tiles, function(value, index){
+                if(value.xPos == tile.xPos - 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
+                    left = true;
+                }
+
+                // Rechts
+                if(value.xPos == tile.xPos + 2 && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos){
+                    right = true;
+                }
+
+                // Boven/Op
+                if((value.xPos >= tile.xPos - 1 && value.xPos <= tile.xPos + 1) && (value.yPos >= tile.yPos - 1 && value.yPos <= tile.yPos + 1) && value.zPos == tile.zPos + 1){
+                    top  = true;
+                }
+                
+            });
+
+            if((left && right) || top) {
+                check = false;
+            }
         }
         return check;
     }

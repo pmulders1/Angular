@@ -1,3 +1,10 @@
+@import "compass/utilities/sprites";
+@import "Sprites1/*.png";
+@include all-Sprites1-sprites;
+
+@import "Sprites2/*.png";
+@include all-Sprites2-sprites;
+
 $themes: (
   theme-indie: (font-family: 'Indie Flower'), 
   theme-titillium: (font-family: 'Titillium Web'), 
@@ -14,4 +21,9 @@ $themes: (
 
 @import "config.scss";
 
-@import "tile.scss";
+$baseTileWidth: 70px;
+$baseTileHeight: 90px;
+
+.clicked{
+	border: 3px solid red;
+}

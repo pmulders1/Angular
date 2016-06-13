@@ -1,4 +1,4 @@
-<html lang="en" ng-app="webs6" ng-controller="HomeController">
+<html lang="en" ng-app="webs6" ng-controller="HomeController as h">
 	<head>
    		<!-- The css is copied into dist/css/app.css by the copy task -->
    		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
@@ -7,7 +7,7 @@
 		<!-- Optional theme -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 		
-		<link rel="stylesheet" href="./css/{{currentTheme}}.css">
+		<link rel="stylesheet" ng-href="./css/{{currentTheme}}.css">
 		<link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>

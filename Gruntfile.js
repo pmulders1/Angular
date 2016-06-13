@@ -22,7 +22,8 @@ module.exports = function(grunt) {
         sass: {
             dist: {
                 options: {
-                    style: 'expanded'
+                    style: 'expanded',
+                    compass: true
                 },
                 files: {
                     'dist/css/style.css'        : 'app/css/style.scss',

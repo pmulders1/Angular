@@ -1,0 +1,229 @@
+/* line 10, ../../app/css/tile.scss */
+.clicked {
+  border: 3px solid red;
+}
+
+/* line 13, ../../app/css/tile.scss */
+.tile {
+  width: 70px;
+  height: 90px;
+}
+
+/* line 18, ../../app/css/tile.scss */
+.tiny {
+  -ms-transform: scale(0.5, 0.5);
+  /* IE 9 */
+  -webkit-transform: scale(0.5, 0.5);
+  /* Safari */
+  transform: scale(0.5, 0.5);
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character1 {
+  background-position: 0 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character2 {
+  background-position: -73 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character3 {
+  background-position: -146 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character4 {
+  background-position: -219 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character5 {
+  background-position: -292 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character6 {
+  background-position: -365 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character7 {
+  background-position: -438 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character8 {
+  background-position: -511 0;
+}
+
+/* line 27, ../../app/css/tile.scss */
+.Character9 {
+  background-position: -584 0;
+}
+
+/* line 32, ../../app/css/tile.scss */
+.WindNorth {
+  background-position: -657px 0px;
+}
+
+/* line 33, ../../app/css/tile.scss */
+.WindSouth {
+  background-position: -730px 0px;
+}
+
+/* line 34, ../../app/css/tile.scss */
+.WindEast {
+  background-position: -803px 0px;
+}
+
+/* line 35, ../../app/css/tile.scss */
+.WindWest {
+  background-position: -876px 0px;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo1 {
+  background-position: 0 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo2 {
+  background-position: -73 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo3 {
+  background-position: -146 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo4 {
+  background-position: -219 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo5 {
+  background-position: -292 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo6 {
+  background-position: -365 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo7 {
+  background-position: -438 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo8 {
+  background-position: -511 -90;
+}
+
+/* line 40, ../../app/css/tile.scss */
+.Bamboo9 {
+  background-position: -584 -90;
+}
+
+/* line 45, ../../app/css/tile.scss */
+.SeasonSpring {
+  background-position: -657px -90px;
+}
+
+/* line 46, ../../app/css/tile.scss */
+.SeasonSummer {
+  background-position: -730px -90px;
+}
+
+/* line 47, ../../app/css/tile.scss */
+.SeasonAutumn {
+  background-position: -803px -90px;
+}
+
+/* line 48, ../../app/css/tile.scss */
+.SeasonWinter {
+  background-position: -876px -90px;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle1 {
+  background-position: 0 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle2 {
+  background-position: -73 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle3 {
+  background-position: -146 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle4 {
+  background-position: -219 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle5 {
+  background-position: -292 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle6 {
+  background-position: -365 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle7 {
+  background-position: -438 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle8 {
+  background-position: -511 -180;
+}
+
+/* line 53, ../../app/css/tile.scss */
+.Circle9 {
+  background-position: -584 -180;
+}
+
+/* line 58, ../../app/css/tile.scss */
+.FlowerBamboo {
+  background-position: -657px -180px;
+}
+
+/* line 59, ../../app/css/tile.scss */
+.FlowerPlum {
+  background-position: -730px -180px;
+}
+
+/* line 60, ../../app/css/tile.scss */
+.FlowerOrchid {
+  background-position: -803px -180px;
+}
+
+/* line 61, ../../app/css/tile.scss */
+.FlowerChrysantememum {
+  background-position: -876px -180px;
+}
+
+/* line 63, ../../app/css/tile.scss */
+.DragonGreen {
+  background-position: -951px 0px;
+}
+
+/* line 64, ../../app/css/tile.scss */
+.DragonRed {
+  background-position: -951px -90px;
+}
+
+/* line 65, ../../app/css/tile.scss */
+.DragonWhite {
+  background-position: -951px -180px;
+}

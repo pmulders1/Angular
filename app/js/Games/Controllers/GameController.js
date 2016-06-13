@@ -16,23 +16,33 @@ module.exports = function($scope, AuthService,GameService, $stateParams){
 		"templateName": "","minPlayers": 0,"maxPlayers": 0
 	}
 
-	getGames();
-	getGameTemplates();
-
-	function getGames(){
+	self.getGames = function(){
 		GameService.getGames(function(response){
 			if(response.status == 200){
 				for(var i = 0; i < response.data.length; i++){
 					var game = new Game(response.data[i]);
+					game.canJoin = self.inGame(game) == true ? false : true;
 					self.games.push(game);
 				}
 			} else {
 				self.status = 'Unable to load customer data: ' + error.message;
 			}
+
+
 		});
 	}
 
-	function getGameTemplates(){
+	self.inGame = function(game){
+		var check = false;
+		for (var i = 0; i < game.players.length; i++) {
+			if(game.players[i]._id == AuthService.getUser()){
+				check = true;
+			}
+		}
+		return check;
+	}
+
+	self.getGameTemplates = function(){
 		GameService.getGameTemplates(function(response){
 			if(response.status == 200){
 				for(var i = 0; i < response.data.length; i++){
@@ -44,13 +54,19 @@ module.exports = function($scope, AuthService,GameService, $stateParams){
 		});
 	}
 
-	self.addUser = function(_id){
+	self.getGames();
+	self.getGameTemplates();
+
+	self.addUser = function(game){
 		self.succesMessage = '';
 		self.errorMessage = '';
-
-		GameService.addUser(_id, function(response){
+		console.log(game);
+		GameService.addUser(game._id, function(response){
 			if(response.status == 200){
-				self.succesMessage = "You joined the game with id: " + _id;
+				self.succesMessage = "You joined the game with id: " + game._id;
+				game.players.push({_id: AuthService.getUser()});
+				console.log(game);
+				game.canJoin = false;
 			} else {
 				self.errorMessage = response.data.message;
 			}
@@ -78,10 +94,11 @@ module.exports = function($scope, AuthService,GameService, $stateParams){
         $scope.model = !bool ? undefined : self.userId;
     }
 
-    $scope.myGames = function(model){
+    $scope.myGames = function(game){
         if($scope.model == undefined){
             return true;
         }
-        return model.createdBy._id == $scope.model ? true : false;
+
+        return self.inGame(game);
     }
 }

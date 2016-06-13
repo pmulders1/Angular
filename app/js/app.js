@@ -1,4 +1,4 @@
-/*
+ /*
 
 TODO: 
 - Laten zien hoeveel matches er mogelijk zijn
@@ -45,8 +45,9 @@ app.directive('tile', function(){
 			tile: "=",
 			onSelect: "=?"
 		},
-		controller: function($scope){
+		controller: function($scope, $rootScope){
 			var self = this;
+            $scope.currentTheme = $rootScope.currentTheme;
 			self.CheckMatch = function(tile){
 				self.onSelect(tile);
 			}

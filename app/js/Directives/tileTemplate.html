@@ -1,3 +1,4 @@
 <div class="absolute" ng-click="t.CheckMatch(t.tile)" style="left:{{t.tile.xPos * 36 - t.tile.zPos * 5}}px; top:{{t.tile.yPos * 45 - t.tile.zPos * 5}}px; z-index:{{t.tile.zPos}}">
-		<div class="tile {{t.tile.tile.suit}}{{t.tile.tile.name}} {{t.tile.clicked}}"></div>
+		<div class="tile Sprites1-{{t.tile.tile.suit}}{{t.tile.tile.name}} {{t.tile.clicked}}" ng-show="{{currentTheme}} == 'architects' || {{currentTheme}} == 'indie' || {{currentTheme}} == 'josefin'"></div>
+		<div class="tile Sprites2-{{t.tile.tile.suit}}{{t.tile.tile.name}} {{t.tile.clicked}}" ng-show="{{currentTheme}} == 'montserrat' || {{currentTheme}} == titillium"></div>
 </div>

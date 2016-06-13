@@ -866,190 +866,380 @@
   position: absolute;
 }
 
+.Sprites1-sprite, .Sprites1-Bamboo1, .Sprites1-Bamboo2, .Sprites1-Bamboo3, .Sprites1-Bamboo4, .Sprites1-Bamboo5, .Sprites1-Bamboo6, .Sprites1-Bamboo7, .Sprites1-Bamboo8, .Sprites1-Bamboo9, .Sprites1-Character1, .Sprites1-Character2, .Sprites1-Character3, .Sprites1-Character4, .Sprites1-Character5, .Sprites1-Character6, .Sprites1-Character7, .Sprites1-Character8, .Sprites1-Character9, .Sprites1-Circle1, .Sprites1-Circle2, .Sprites1-Circle3, .Sprites1-Circle4, .Sprites1-Circle5, .Sprites1-Circle6, .Sprites1-Circle7, .Sprites1-Circle8, .Sprites1-Circle9, .Sprites1-DragonGreen, .Sprites1-DragonRed, .Sprites1-DragonWhite, .Sprites1-FlowerBamboo, .Sprites1-FlowerChrysanthemum, .Sprites1-FlowerOrchid, .Sprites1-FlowerPlum, .Sprites1-SeasonAutumn, .Sprites1-SeasonSpring, .Sprites1-SeasonSummer, .Sprites1-SeasonWinter, .Sprites1-WindEast, .Sprites1-WindNorth, .Sprites1-WindSouth, .Sprites1-WindWest {
+  background-image: url('../../app/images/Sprites1-s7805ee5a98.png');
+  background-repeat: no-repeat;
+}
+
+.Sprites1-Bamboo1 {
+  background-position: 0 0;
+}
+
+.Sprites1-Bamboo2 {
+  background-position: 0 -90px;
+}
+
+.Sprites1-Bamboo3 {
+  background-position: 0 -180px;
+}
+
+.Sprites1-Bamboo4 {
+  background-position: 0 -270px;
+}
+
+.Sprites1-Bamboo5 {
+  background-position: 0 -360px;
+}
+
+.Sprites1-Bamboo6 {
+  background-position: 0 -450px;
+}
+
+.Sprites1-Bamboo7 {
+  background-position: 0 -540px;
+}
+
+.Sprites1-Bamboo8 {
+  background-position: 0 -630px;
+}
+
+.Sprites1-Bamboo9 {
+  background-position: 0 -720px;
+}
+
+.Sprites1-Character1 {
+  background-position: 0 -810px;
+}
+
+.Sprites1-Character2 {
+  background-position: 0 -900px;
+}
+
+.Sprites1-Character3 {
+  background-position: 0 -990px;
+}
+
+.Sprites1-Character4 {
+  background-position: 0 -1080px;
+}
+
+.Sprites1-Character5 {
+  background-position: 0 -1170px;
+}
+
+.Sprites1-Character6 {
+  background-position: 0 -1260px;
+}
+
+.Sprites1-Character7 {
+  background-position: 0 -1350px;
+}
+
+.Sprites1-Character8 {
+  background-position: 0 -1440px;
+}
+
+.Sprites1-Character9 {
+  background-position: 0 -1530px;
+}
+
+.Sprites1-Circle1 {
+  background-position: 0 -1620px;
+}
+
+.Sprites1-Circle2 {
+  background-position: 0 -1710px;
+}
+
+.Sprites1-Circle3 {
+  background-position: 0 -1800px;
+}
+
+.Sprites1-Circle4 {
+  background-position: 0 -1890px;
+}
+
+.Sprites1-Circle5 {
+  background-position: 0 -1980px;
+}
+
+.Sprites1-Circle6 {
+  background-position: 0 -2070px;
+}
+
+.Sprites1-Circle7 {
+  background-position: 0 -2160px;
+}
+
+.Sprites1-Circle8 {
+  background-position: 0 -2250px;
+}
+
+.Sprites1-Circle9 {
+  background-position: 0 -2340px;
+}
+
+.Sprites1-DragonGreen {
+  background-position: 0 -2430px;
+}
+
+.Sprites1-DragonRed {
+  background-position: 0 -2520px;
+}
+
+.Sprites1-DragonWhite {
+  background-position: 0 -2610px;
+}
+
+.Sprites1-FlowerBamboo {
+  background-position: 0 -2700px;
+}
+
+.Sprites1-FlowerChrysanthemum {
+  background-position: 0 -2790px;
+}
+
+.Sprites1-FlowerOrchid {
+  background-position: 0 -2880px;
+}
+
+.Sprites1-FlowerPlum {
+  background-position: 0 -2970px;
+}
+
+.Sprites1-SeasonAutumn {
+  background-position: 0 -3060px;
+}
+
+.Sprites1-SeasonSpring {
+  background-position: 0 -3150px;
+}
+
+.Sprites1-SeasonSummer {
+  background-position: 0 -3240px;
+}
+
+.Sprites1-SeasonWinter {
+  background-position: 0 -3330px;
+}
+
+.Sprites1-WindEast {
+  background-position: 0 -3420px;
+}
+
+.Sprites1-WindNorth {
+  background-position: 0 -3510px;
+}
+
+.Sprites1-WindSouth {
+  background-position: 0 -3600px;
+}
+
+.Sprites1-WindWest {
+  background-position: 0 -3690px;
+}
+
+.Sprites2-sprite, .Sprites2-Bamboo1, .Sprites2-Bamboo2, .Sprites2-Bamboo3, .Sprites2-Bamboo4, .Sprites2-Bamboo5, .Sprites2-Bamboo6, .Sprites2-Bamboo7, .Sprites2-Bamboo8, .Sprites2-Bamboo9, .Sprites2-Character1, .Sprites2-Character2, .Sprites2-Character3, .Sprites2-Character4, .Sprites2-Character5, .Sprites2-Character6, .Sprites2-Character7, .Sprites2-Character8, .Sprites2-Character9, .Sprites2-Circle1, .Sprites2-Circle2, .Sprites2-Circle3, .Sprites2-Circle4, .Sprites2-Circle5, .Sprites2-Circle6, .Sprites2-Circle7, .Sprites2-Circle8, .Sprites2-Circle9, .Sprites2-DragonGreen, .Sprites2-DragonRed, .Sprites2-DragonWhite, .Sprites2-FlowerBamboo, .Sprites2-FlowerChrysanthemum, .Sprites2-FlowerOrchid, .Sprites2-FlowerPlum, .Sprites2-SeasonAutumn, .Sprites2-SeasonSpring, .Sprites2-SeasonSummer, .Sprites2-SeasonWinter, .Sprites2-WindEast, .Sprites2-WindNorth, .Sprites2-WindSouth, .Sprites2-WindWest {
+  background-image: url('../../app/images/Sprites2-s4e2e029d51.png');
+  background-repeat: no-repeat;
+}
+
+.Sprites2-Bamboo1 {
+  background-position: 0 0;
+}
+
+.Sprites2-Bamboo2 {
+  background-position: 0 -90px;
+}
+
+.Sprites2-Bamboo3 {
+  background-position: 0 -180px;
+}
+
+.Sprites2-Bamboo4 {
+  background-position: 0 -270px;
+}
+
+.Sprites2-Bamboo5 {
+  background-position: 0 -360px;
+}
+
+.Sprites2-Bamboo6 {
+  background-position: 0 -450px;
+}
+
+.Sprites2-Bamboo7 {
+  background-position: 0 -540px;
+}
+
+.Sprites2-Bamboo8 {
+  background-position: 0 -630px;
+}
+
+.Sprites2-Bamboo9 {
+  background-position: 0 -720px;
+}
+
+.Sprites2-Character1 {
+  background-position: 0 -810px;
+}
+
+.Sprites2-Character2 {
+  background-position: 0 -900px;
+}
+
+.Sprites2-Character3 {
+  background-position: 0 -990px;
+}
+
+.Sprites2-Character4 {
+  background-position: 0 -1080px;
+}
+
+.Sprites2-Character5 {
+  background-position: 0 -1170px;
+}
+
+.Sprites2-Character6 {
+  background-position: 0 -1260px;
+}
+
+.Sprites2-Character7 {
+  background-position: 0 -1350px;
+}
+
+.Sprites2-Character8 {
+  background-position: 0 -1440px;
+}
+
+.Sprites2-Character9 {
+  background-position: 0 -1530px;
+}
+
+.Sprites2-Circle1 {
+  background-position: 0 -1620px;
+}
+
+.Sprites2-Circle2 {
+  background-position: 0 -1710px;
+}
+
+.Sprites2-Circle3 {
+  background-position: 0 -1800px;
+}
+
+.Sprites2-Circle4 {
+  background-position: 0 -1890px;
+}
+
+.Sprites2-Circle5 {
+  background-position: 0 -1980px;
+}
+
+.Sprites2-Circle6 {
+  background-position: 0 -2070px;
+}
+
+.Sprites2-Circle7 {
+  background-position: 0 -2160px;
+}
+
+.Sprites2-Circle8 {
+  background-position: 0 -2250px;
+}
+
+.Sprites2-Circle9 {
+  background-position: 0 -2340px;
+}
+
+.Sprites2-DragonGreen {
+  background-position: 0 -2430px;
+}
+
+.Sprites2-DragonRed {
+  background-position: 0 -2520px;
+}
+
+.Sprites2-DragonWhite {
+  background-position: 0 -2610px;
+}
+
+.Sprites2-FlowerBamboo {
+  background-position: 0 -2700px;
+}
+
+.Sprites2-FlowerChrysanthemum {
+  background-position: 0 -2790px;
+}
+
+.Sprites2-FlowerOrchid {
+  background-position: 0 -2880px;
+}
+
+.Sprites2-FlowerPlum {
+  background-position: 0 -2970px;
+}
+
+.Sprites2-SeasonAutumn {
+  background-position: 0 -3060px;
+}
+
+.Sprites2-SeasonSpring {
+  background-position: 0 -3150px;
+}
+
+.Sprites2-SeasonSummer {
+  background-position: 0 -3240px;
+}
+
+.Sprites2-SeasonWinter {
+  background-position: 0 -3330px;
+}
+
+.Sprites2-WindEast {
+  background-position: 0 -3420px;
+}
+
+.Sprites2-WindNorth {
+  background-position: 0 -3510px;
+}
+
+.Sprites2-WindSouth {
+  background-position: 0 -3600px;
+}
+
+.Sprites2-WindWest {
+  background-position: 0 -3690px;
+}
+
+.theme-indie {
+  font-family: "Indie Flower";
+}
+
+.theme-titillium {
+  font-family: "Titillium Web";
+}
+
+.theme-montserrat {
+  font-family: "Montserrat";
+}
+
+.theme-josefin {
+  font-family: "Josefin Sans";
+}
+
+.theme-architects {
+  font-family: "Architects Daughter";
+}
+
 .clicked {
   border: 3px solid red;
 }
 
 .tile {
-  background-image: url("./../images/sprites.png");
   width: 70px;
   height: 90px;
-}
-
-.tiny {
-  -ms-transform: scale(0.5, 0.5);
-  /* IE 9 */
-  -webkit-transform: scale(0.5, 0.5);
-  /* Safari */
-  transform: scale(0.5, 0.5);
-}
-
-.Character1 {
-  background-position: 0 0;
-}
-
-.Character2 {
-  background-position: -73 0;
-}
-
-.Character3 {
-  background-position: -146 0;
-}
-
-.Character4 {
-  background-position: -219 0;
-}
-
-.Character5 {
-  background-position: -292 0;
-}
-
-.Character6 {
-  background-position: -365 0;
-}
-
-.Character7 {
-  background-position: -438 0;
-}
-
-.Character8 {
-  background-position: -511 0;
-}
-
-.Character9 {
-  background-position: -584 0;
-}
-
-.WindNorth {
-  background-position: -657px 0px;
-}
-
-.WindSouth {
-  background-position: -730px 0px;
-}
-
-.WindEast {
-  background-position: -803px 0px;
-}
-
-.WindWest {
-  background-position: -876px 0px;
-}
-
-.Bamboo1 {
-  background-position: 0 -90;
-}
-
-.Bamboo2 {
-  background-position: -73 -90;
-}
-
-.Bamboo3 {
-  background-position: -146 -90;
-}
-
-.Bamboo4 {
-  background-position: -219 -90;
-}
-
-.Bamboo5 {
-  background-position: -292 -90;
-}
-
-.Bamboo6 {
-  background-position: -365 -90;
-}
-
-.Bamboo7 {
-  background-position: -438 -90;
-}
-
-.Bamboo8 {
-  background-position: -511 -90;
-}
-
-.Bamboo9 {
-  background-position: -584 -90;
-}
-
-.SeasonSpring {
-  background-position: -657px -90px;
-}
-
-.SeasonSummer {
-  background-position: -730px -90px;
-}
-
-.SeasonAutumn {
-  background-position: -803px -90px;
-}
-
-.SeasonWinter {
-  background-position: -876px -90px;
-}
-
-.Circle1 {
-  background-position: 0 -180;
-}
-
-.Circle2 {
-  background-position: -73 -180;
-}
-
-.Circle3 {
-  background-position: -146 -180;
-}
-
-.Circle4 {
-  background-position: -219 -180;
-}
-
-.Circle5 {
-  background-position: -292 -180;
-}
-
-.Circle6 {
-  background-position: -365 -180;
-}
-
-.Circle7 {
-  background-position: -438 -180;
-}
-
-.Circle8 {
-  background-position: -511 -180;
-}
-
-.Circle9 {
-  background-position: -584 -180;
-}
-
-.FlowerBamboo {
-  background-position: -657px -180px;
-}
-
-.FlowerPlum {
-  background-position: -730px -180px;
-}
-
-.FlowerOrchid {
-  background-position: -803px -180px;
-}
-
-.FlowerChrysantememum {
-  background-position: -876px -180px;
-}
-
-.DragonGreen {
-  background-position: -951px 0px;
-}
-
-.DragonRed {
-  background-position: -951px -90px;
-}
-
-.DragonWhite {
-  background-position: -951px -180px;
+  background-image: url("./../images/Sprites1-s7805ee5a98.png") !important;
 }
 
 /*# sourceMappingURL=josefin.css.map */

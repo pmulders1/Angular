@@ -1,0 +1,1553 @@
+/* line 1, ../../../app/css/font/titillium.scss */
+.theme {
+  font-family: 'Titillium Web';
+}
+
+/* line 1, ../../../app/css/config.scss */
+.right5 {
+  margin-right: 5px;
+}
+
+/* line 2, ../../../app/css/config.scss */
+.right10 {
+  margin-right: 10px;
+}
+
+/* line 3, ../../../app/css/config.scss */
+.right15 {
+  margin-right: 15px;
+}
+
+/* line 4, ../../../app/css/config.scss */
+.right20 {
+  margin-right: 20px;
+}
+
+/* line 6, ../../../app/css/config.scss */
+.floatRight {
+  float: right;
+}
+
+/* line 7, ../../../app/css/config.scss */
+.floatLeft {
+  float: left;
+}
+
+/* line 9, ../../../app/css/config.scss */
+.alignCenter {
+  text-align: center;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top5 {
+  margin-top: 5;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot5 {
+  margin-bottom: 5;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right5 {
+  margin-right: 5;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left5 {
+  margin-left: 5;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top10 {
+  margin-top: 10;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot10 {
+  margin-bottom: 10;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right10 {
+  margin-right: 10;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left10 {
+  margin-left: 10;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top15 {
+  margin-top: 15;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot15 {
+  margin-bottom: 15;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right15 {
+  margin-right: 15;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left15 {
+  margin-left: 15;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top20 {
+  margin-top: 20;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot20 {
+  margin-bottom: 20;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right20 {
+  margin-right: 20;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left20 {
+  margin-left: 20;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top25 {
+  margin-top: 25;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot25 {
+  margin-bottom: 25;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right25 {
+  margin-right: 25;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left25 {
+  margin-left: 25;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top30 {
+  margin-top: 30;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot30 {
+  margin-bottom: 30;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right30 {
+  margin-right: 30;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left30 {
+  margin-left: 30;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top35 {
+  margin-top: 35;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot35 {
+  margin-bottom: 35;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right35 {
+  margin-right: 35;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left35 {
+  margin-left: 35;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top40 {
+  margin-top: 40;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot40 {
+  margin-bottom: 40;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right40 {
+  margin-right: 40;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left40 {
+  margin-left: 40;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top45 {
+  margin-top: 45;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot45 {
+  margin-bottom: 45;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right45 {
+  margin-right: 45;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left45 {
+  margin-left: 45;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top50 {
+  margin-top: 50;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot50 {
+  margin-bottom: 50;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right50 {
+  margin-right: 50;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left50 {
+  margin-left: 50;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top55 {
+  margin-top: 55;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot55 {
+  margin-bottom: 55;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right55 {
+  margin-right: 55;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left55 {
+  margin-left: 55;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top60 {
+  margin-top: 60;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot60 {
+  margin-bottom: 60;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right60 {
+  margin-right: 60;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left60 {
+  margin-left: 60;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top65 {
+  margin-top: 65;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot65 {
+  margin-bottom: 65;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right65 {
+  margin-right: 65;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left65 {
+  margin-left: 65;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top70 {
+  margin-top: 70;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot70 {
+  margin-bottom: 70;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right70 {
+  margin-right: 70;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left70 {
+  margin-left: 70;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top75 {
+  margin-top: 75;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot75 {
+  margin-bottom: 75;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right75 {
+  margin-right: 75;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left75 {
+  margin-left: 75;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top80 {
+  margin-top: 80;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot80 {
+  margin-bottom: 80;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right80 {
+  margin-right: 80;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left80 {
+  margin-left: 80;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top85 {
+  margin-top: 85;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot85 {
+  margin-bottom: 85;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right85 {
+  margin-right: 85;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left85 {
+  margin-left: 85;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top90 {
+  margin-top: 90;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot90 {
+  margin-bottom: 90;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right90 {
+  margin-right: 90;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left90 {
+  margin-left: 90;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top95 {
+  margin-top: 95;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot95 {
+  margin-bottom: 95;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right95 {
+  margin-right: 95;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left95 {
+  margin-left: 95;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top100 {
+  margin-top: 100;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot100 {
+  margin-bottom: 100;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right100 {
+  margin-right: 100;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left100 {
+  margin-left: 100;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top105 {
+  margin-top: 105;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot105 {
+  margin-bottom: 105;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right105 {
+  margin-right: 105;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left105 {
+  margin-left: 105;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top110 {
+  margin-top: 110;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot110 {
+  margin-bottom: 110;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right110 {
+  margin-right: 110;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left110 {
+  margin-left: 110;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top115 {
+  margin-top: 115;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot115 {
+  margin-bottom: 115;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right115 {
+  margin-right: 115;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left115 {
+  margin-left: 115;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top120 {
+  margin-top: 120;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot120 {
+  margin-bottom: 120;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right120 {
+  margin-right: 120;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left120 {
+  margin-left: 120;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top125 {
+  margin-top: 125;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot125 {
+  margin-bottom: 125;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right125 {
+  margin-right: 125;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left125 {
+  margin-left: 125;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top130 {
+  margin-top: 130;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot130 {
+  margin-bottom: 130;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right130 {
+  margin-right: 130;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left130 {
+  margin-left: 130;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top135 {
+  margin-top: 135;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot135 {
+  margin-bottom: 135;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right135 {
+  margin-right: 135;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left135 {
+  margin-left: 135;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top140 {
+  margin-top: 140;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot140 {
+  margin-bottom: 140;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right140 {
+  margin-right: 140;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left140 {
+  margin-left: 140;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top145 {
+  margin-top: 145;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot145 {
+  margin-bottom: 145;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right145 {
+  margin-right: 145;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left145 {
+  margin-left: 145;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top150 {
+  margin-top: 150;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot150 {
+  margin-bottom: 150;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right150 {
+  margin-right: 150;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left150 {
+  margin-left: 150;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top155 {
+  margin-top: 155;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot155 {
+  margin-bottom: 155;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right155 {
+  margin-right: 155;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left155 {
+  margin-left: 155;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top160 {
+  margin-top: 160;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot160 {
+  margin-bottom: 160;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right160 {
+  margin-right: 160;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left160 {
+  margin-left: 160;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top165 {
+  margin-top: 165;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot165 {
+  margin-bottom: 165;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right165 {
+  margin-right: 165;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left165 {
+  margin-left: 165;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top170 {
+  margin-top: 170;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot170 {
+  margin-bottom: 170;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right170 {
+  margin-right: 170;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left170 {
+  margin-left: 170;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top175 {
+  margin-top: 175;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot175 {
+  margin-bottom: 175;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right175 {
+  margin-right: 175;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left175 {
+  margin-left: 175;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top180 {
+  margin-top: 180;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot180 {
+  margin-bottom: 180;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right180 {
+  margin-right: 180;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left180 {
+  margin-left: 180;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top185 {
+  margin-top: 185;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot185 {
+  margin-bottom: 185;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right185 {
+  margin-right: 185;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left185 {
+  margin-left: 185;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top190 {
+  margin-top: 190;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot190 {
+  margin-bottom: 190;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right190 {
+  margin-right: 190;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left190 {
+  margin-left: 190;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top195 {
+  margin-top: 195;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot195 {
+  margin-bottom: 195;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right195 {
+  margin-right: 195;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left195 {
+  margin-left: 195;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top200 {
+  margin-top: 200;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot200 {
+  margin-bottom: 200;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right200 {
+  margin-right: 200;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left200 {
+  margin-left: 200;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top205 {
+  margin-top: 205;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot205 {
+  margin-bottom: 205;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right205 {
+  margin-right: 205;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left205 {
+  margin-left: 205;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top210 {
+  margin-top: 210;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot210 {
+  margin-bottom: 210;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right210 {
+  margin-right: 210;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left210 {
+  margin-left: 210;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top215 {
+  margin-top: 215;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot215 {
+  margin-bottom: 215;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right215 {
+  margin-right: 215;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left215 {
+  margin-left: 215;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top220 {
+  margin-top: 220;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot220 {
+  margin-bottom: 220;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right220 {
+  margin-right: 220;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left220 {
+  margin-left: 220;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top225 {
+  margin-top: 225;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot225 {
+  margin-bottom: 225;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right225 {
+  margin-right: 225;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left225 {
+  margin-left: 225;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top230 {
+  margin-top: 230;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot230 {
+  margin-bottom: 230;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right230 {
+  margin-right: 230;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left230 {
+  margin-left: 230;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top235 {
+  margin-top: 235;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot235 {
+  margin-bottom: 235;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right235 {
+  margin-right: 235;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left235 {
+  margin-left: 235;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top240 {
+  margin-top: 240;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot240 {
+  margin-bottom: 240;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right240 {
+  margin-right: 240;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left240 {
+  margin-left: 240;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top245 {
+  margin-top: 245;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot245 {
+  margin-bottom: 245;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right245 {
+  margin-right: 245;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left245 {
+  margin-left: 245;
+}
+
+/* line 13, ../../../app/css/config.scss */
+.top250 {
+  margin-top: 250;
+}
+
+/* line 14, ../../../app/css/config.scss */
+.bot250 {
+  margin-bottom: 250;
+}
+
+/* line 15, ../../../app/css/config.scss */
+.right250 {
+  margin-right: 250;
+}
+
+/* line 16, ../../../app/css/config.scss */
+.left250 {
+  margin-left: 250;
+}
+
+/* line 19, ../../../app/css/config.scss */
+.contentWidth {
+  width: 90% !important;
+  margin: 0 auto;
+}
+
+/* line 24, ../../../app/css/config.scss */
+.content320 {
+  width: 320px;
+  margin: 0 auto;
+}
+/* line 28, ../../../app/css/config.scss */
+.content320 h1, .content320 h4 {
+  text-align: initial;
+}
+/* line 32, ../../../app/css/config.scss */
+.content320 select, .content320 input {
+  width: 100%;
+}
+
+/* line 36, ../../../app/css/config.scss */
+.open {
+  background-color: #337ab7 !important;
+}
+
+/* line 37, ../../../app/css/config.scss */
+.playing {
+  background-color: #5cb85c !important;
+}
+
+/* line 38, ../../../app/css/config.scss */
+.finished {
+  background-color: #d9534f !important;
+}
+
+/* line 40, ../../../app/css/config.scss */
+.fontSize13 {
+  font-size: 13px;
+}
+
+/* line 42, ../../../app/css/config.scss */
+.absolute {
+  position: absolute;
+}
+
+/* line 376, Sprites1/*.png */
+.Sprites1-sprite, .Sprites1-Bamboo1, .Sprites1-Bamboo2, .Sprites1-Bamboo3, .Sprites1-Bamboo4, .Sprites1-Bamboo5, .Sprites1-Bamboo6, .Sprites1-Bamboo7, .Sprites1-Bamboo8, .Sprites1-Bamboo9, .Sprites1-Character1, .Sprites1-Character2, .Sprites1-Character3, .Sprites1-Character4, .Sprites1-Character5, .Sprites1-Character6, .Sprites1-Character7, .Sprites1-Character8, .Sprites1-Character9, .Sprites1-Circle1, .Sprites1-Circle2, .Sprites1-Circle3, .Sprites1-Circle4, .Sprites1-Circle5, .Sprites1-Circle6, .Sprites1-Circle7, .Sprites1-Circle8, .Sprites1-Circle9, .Sprites1-DragonGreen, .Sprites1-DragonRed, .Sprites1-DragonWhite, .Sprites1-FlowerBamboo, .Sprites1-FlowerChrysanthemum, .Sprites1-FlowerOrchid, .Sprites1-FlowerPlum, .Sprites1-SeasonAutumn, .Sprites1-SeasonSpring, .Sprites1-SeasonSummer, .Sprites1-SeasonWinter, .Sprites1-WindEast, .Sprites1-WindNorth, .Sprites1-WindSouth, .Sprites1-WindWest {
+  background-image: url('../../../app/images/Sprites1-s7805ee5a98.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo1 {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo2 {
+  background-position: 0 -90px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo3 {
+  background-position: 0 -180px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo4 {
+  background-position: 0 -270px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo5 {
+  background-position: 0 -360px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo6 {
+  background-position: 0 -450px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo7 {
+  background-position: 0 -540px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo8 {
+  background-position: 0 -630px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Bamboo9 {
+  background-position: 0 -720px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character1 {
+  background-position: 0 -810px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character2 {
+  background-position: 0 -900px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character3 {
+  background-position: 0 -990px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character4 {
+  background-position: 0 -1080px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character5 {
+  background-position: 0 -1170px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character6 {
+  background-position: 0 -1260px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character7 {
+  background-position: 0 -1350px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character8 {
+  background-position: 0 -1440px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Character9 {
+  background-position: 0 -1530px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle1 {
+  background-position: 0 -1620px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle2 {
+  background-position: 0 -1710px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle3 {
+  background-position: 0 -1800px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle4 {
+  background-position: 0 -1890px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle5 {
+  background-position: 0 -1980px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle6 {
+  background-position: 0 -2070px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle7 {
+  background-position: 0 -2160px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle8 {
+  background-position: 0 -2250px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-Circle9 {
+  background-position: 0 -2340px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-DragonGreen {
+  background-position: 0 -2430px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-DragonRed {
+  background-position: 0 -2520px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-DragonWhite {
+  background-position: 0 -2610px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-FlowerBamboo {
+  background-position: 0 -2700px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-FlowerChrysanthemum {
+  background-position: 0 -2790px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-FlowerOrchid {
+  background-position: 0 -2880px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-FlowerPlum {
+  background-position: 0 -2970px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-SeasonAutumn {
+  background-position: 0 -3060px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-SeasonSpring {
+  background-position: 0 -3150px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-SeasonSummer {
+  background-position: 0 -3240px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-SeasonWinter {
+  background-position: 0 -3330px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-WindEast {
+  background-position: 0 -3420px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-WindNorth {
+  background-position: 0 -3510px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-WindSouth {
+  background-position: 0 -3600px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites1-WindWest {
+  background-position: 0 -3690px;
+}
+
+/* line 376, Sprites2/*.png */
+.Sprites2-sprite, .Sprites2-Bamboo1, .Sprites2-Bamboo2, .Sprites2-Bamboo3, .Sprites2-Bamboo4, .Sprites2-Bamboo5, .Sprites2-Bamboo6, .Sprites2-Bamboo7, .Sprites2-Bamboo8, .Sprites2-Bamboo9, .Sprites2-Character1, .Sprites2-Character2, .Sprites2-Character3, .Sprites2-Character4, .Sprites2-Character5, .Sprites2-Character6, .Sprites2-Character7, .Sprites2-Character8, .Sprites2-Character9, .Sprites2-Circle1, .Sprites2-Circle2, .Sprites2-Circle3, .Sprites2-Circle4, .Sprites2-Circle5, .Sprites2-Circle6, .Sprites2-Circle7, .Sprites2-Circle8, .Sprites2-Circle9, .Sprites2-DragonGreen, .Sprites2-DragonRed, .Sprites2-DragonWhite, .Sprites2-FlowerBamboo, .Sprites2-FlowerChrysanthemum, .Sprites2-FlowerOrchid, .Sprites2-FlowerPlum, .Sprites2-SeasonAutumn, .Sprites2-SeasonSpring, .Sprites2-SeasonSummer, .Sprites2-SeasonWinter, .Sprites2-WindEast, .Sprites2-WindNorth, .Sprites2-WindSouth, .Sprites2-WindWest {
+  background-image: url('../../../app/images/Sprites2-s4e2e029d51.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo1 {
+  background-position: 0 0;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo2 {
+  background-position: 0 -90px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo3 {
+  background-position: 0 -180px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo4 {
+  background-position: 0 -270px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo5 {
+  background-position: 0 -360px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo6 {
+  background-position: 0 -450px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo7 {
+  background-position: 0 -540px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo8 {
+  background-position: 0 -630px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Bamboo9 {
+  background-position: 0 -720px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character1 {
+  background-position: 0 -810px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character2 {
+  background-position: 0 -900px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character3 {
+  background-position: 0 -990px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character4 {
+  background-position: 0 -1080px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character5 {
+  background-position: 0 -1170px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character6 {
+  background-position: 0 -1260px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character7 {
+  background-position: 0 -1350px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character8 {
+  background-position: 0 -1440px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Character9 {
+  background-position: 0 -1530px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle1 {
+  background-position: 0 -1620px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle2 {
+  background-position: 0 -1710px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle3 {
+  background-position: 0 -1800px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle4 {
+  background-position: 0 -1890px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle5 {
+  background-position: 0 -1980px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle6 {
+  background-position: 0 -2070px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle7 {
+  background-position: 0 -2160px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle8 {
+  background-position: 0 -2250px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-Circle9 {
+  background-position: 0 -2340px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-DragonGreen {
+  background-position: 0 -2430px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-DragonRed {
+  background-position: 0 -2520px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-DragonWhite {
+  background-position: 0 -2610px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-FlowerBamboo {
+  background-position: 0 -2700px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-FlowerChrysanthemum {
+  background-position: 0 -2790px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-FlowerOrchid {
+  background-position: 0 -2880px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-FlowerPlum {
+  background-position: 0 -2970px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-SeasonAutumn {
+  background-position: 0 -3060px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-SeasonSpring {
+  background-position: 0 -3150px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-SeasonSummer {
+  background-position: 0 -3240px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-SeasonWinter {
+  background-position: 0 -3330px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-WindEast {
+  background-position: 0 -3420px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-WindNorth {
+  background-position: 0 -3510px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-WindSouth {
+  background-position: 0 -3600px;
+}
+
+/* line 84, ../../../../../../../../Ruby23-x64/lib/ruby/gems/2.3.0/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.Sprites2-WindWest {
+  background-position: 0 -3690px;
+}
+
+/* line 17, ../../../app/css/style.scss */
+.theme-indie {
+  font-family: "Indie Flower";
+}
+
+/* line 17, ../../../app/css/style.scss */
+.theme-titillium {
+  font-family: "Titillium Web";
+}
+
+/* line 17, ../../../app/css/style.scss */
+.theme-montserrat {
+  font-family: "Montserrat";
+}
+
+/* line 17, ../../../app/css/style.scss */
+.theme-josefin {
+  font-family: "Josefin Sans";
+}
+
+/* line 17, ../../../app/css/style.scss */
+.theme-architects {
+  font-family: "Architects Daughter";
+}
+
+/* line 27, ../../../app/css/style.scss */
+.clicked {
+  border: 3px solid red;
+}
+
+/* line 9, ../../../app/css/font/titillium.scss */
+.tile {
+  width: 70px;
+  height: 90px;
+  background-image: url("./../images/Sprites2-s4e2e029d51.png") !important;
+}

@@ -9,7 +9,6 @@ describe("GameDetailCtrl", function(){
 		
 		inject(function($rootScope, $controller, $injector){
 			scope = $rootScope.$new();
-			//gameFactory = $injector.get("GameService");
 			gameDetailCtrl = $controller("GameDetailController", {$scope: scope});
 		});
 	});
@@ -17,8 +16,12 @@ describe("GameDetailCtrl", function(){
 	describe("canClickTile", function(){
 
 		it('should return false when two tiles left and right', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 
 			// Arange
@@ -47,8 +50,12 @@ describe("GameDetailCtrl", function(){
 		});
 
 		it('should return false when one tile on top', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 
 			// Arange
@@ -77,8 +84,12 @@ describe("GameDetailCtrl", function(){
 		});
 
 		it('should return true when current tile on top', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 
 			// Arange
@@ -109,8 +120,12 @@ describe("GameDetailCtrl", function(){
 	});
 	describe("canMatchTile", function(){ 
 		it('should return false when one have WholeSuitFalse on true', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 			gameDetailCtrl.selected = [];
 
@@ -149,8 +164,12 @@ describe("GameDetailCtrl", function(){
 		});
 
 		it('should return false when two have WholeSuitFalse on true and suits are different', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 			gameDetailCtrl.selected = [];
 
@@ -189,8 +208,12 @@ describe("GameDetailCtrl", function(){
 		});
 
 		it('should return false when two have WholeSuitFalse on false and names are different', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 			gameDetailCtrl.selected = [];
 
@@ -231,8 +254,12 @@ describe("GameDetailCtrl", function(){
 	describe("possibleMatches", function(){
 
 		it('should return 1 with two tiles which can match', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 
 			// Arange
@@ -278,8 +305,12 @@ describe("GameDetailCtrl", function(){
 		});
 
 		it('should return 0 when tiles are on top of each other', function(){
+			gameDetailCtrl.username = 'pmulders1@student.avans.nl';
 			gameDetailCtrl.game = {
-				tiles: []
+				tiles: [],
+				players: [{
+					_id: 'pmulders1@student.avans.nl'
+				}]
 			}
 
 			// Arange

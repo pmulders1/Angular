@@ -4,4 +4,10 @@
 
 @import "../config.scss";
 
-@import "../tile.scss";
+@import "../style.scss";
+
+.tile{
+	width: $baseTileWidth;
+	height: $baseTileHeight;
+  	background-image: url('./../images/Sprites1-s7805ee5a98.png')!important;
+}

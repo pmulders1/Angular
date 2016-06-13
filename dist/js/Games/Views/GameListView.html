@@ -23,7 +23,7 @@
     		<td>{{ game.createdOn }}</td>
             <td>{{ game.gameTemplate.id }}</td>
     		<td>{{ game.players.length }} / {{ game.maxPlayers }}</td>
-    		<td><input type="button" class="btn btn-success right10" value="Join Game" ng-click="gList.addUser(game._id)" ng-show="game.state == 'open' && game.players.length < game.maxPlayers"><a class="btn btn-primary" ui-sref="gamedetail({id:game._id})" ui-sref-active="active" nav-transition="none">Details</a></td>
+    		<td><input type="button" class="btn btn-success right10" value="Join Game" ng-click="gList.addUser(game)" ng-show="game.state == 'open' && game.players.length < game.maxPlayers && game.canJoin"><a class="btn btn-primary" ui-sref="gamedetail({id:game._id})" ui-sref-active="active" nav-transition="none">Details</a></td>
     	</tr>
     </tbody>
 </table>
